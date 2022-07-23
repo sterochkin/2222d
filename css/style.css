@@ -651,6 +651,9 @@ a
 	font-size: 16px;
 	margin-top: 15px;
 }
+.footer .link:hover{
+	color: #54ed39;
+}
 .footer .call
 {
 	text-align: right;
@@ -660,7 +663,10 @@ a
 	display: inline;
 }
 .call a:hover{
-	color: red;
+	color: #54ed39;
+}
+.pepper img{ 
+	margin-top: 25px;
 }
 .modal
 {

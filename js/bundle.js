@@ -1881,12 +1881,9 @@ window.addEventListener('DOMContentLoaded', () => {
         wrapper: '.offer__slider-wrapper',
         field: '.offer__slider-inner'
     })
-    ;(0,_modules_timer__WEBPACK_IMPORTED_MODULE_5__["default"])('.timer', '2022-07-01')
+    ;(0,_modules_timer__WEBPACK_IMPORTED_MODULE_5__["default"])('.timer', '2022-08-01')
 
 })  
-
-
-
 
 })();
 

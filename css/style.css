@@ -631,12 +631,11 @@ a
 {
 	background-color: #303030;
 	color: #fff;
-	min-height: 180px;
-	padding: 45px 0 50px 0;
+	min-height: 150px;
+	padding: 30px 0px 25px 0;
 }
 .footer .container
 {
-	align-items: flex-end;
 	display: flex;
 	height: 100%;
 	justify-content: space-between;
@@ -657,7 +656,7 @@ a
 	text-align: right;
 }
 .footer_img{
-	padding-top: 30px;
+	width: 15px;
 	display: inline;
 }
 .call a:hover{

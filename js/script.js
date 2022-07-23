@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
         wrapper: '.offer__slider-wrapper',
         field: '.offer__slider-inner'
     })
-    timer('.timer', '2022-07-01')
+    timer('.timer', '2023-07-01')
 
 })  
 

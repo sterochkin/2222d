@@ -1,8 +1,14 @@
     function  calc() {
-    const prices = [
-        20, 30, 50, 10, 25, 90, 55
+        const country =  [
+        {name: "Витебск", price: "100"},
+        {name: "Минск", price: "200"},
+        {name: "Гродно", price: "300"}   
+    ]
+
+     const prices = [
+        10, 15, 1, 2, 3, 4, 5
       ];
-      
+    
       let current_price = 0;
       
       const buttons = document.querySelectorAll('.calculating__choose-item');

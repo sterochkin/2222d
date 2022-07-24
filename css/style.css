@@ -444,9 +444,9 @@ a
 }
 .calculating__total
 {
-	align-items: center;
 	display: flex;
-	justify-content: space-evenly;
+	align-items: baseline;
+	justify-content: center;
 	margin: 0 auto;
 	width: 490px;
 }
@@ -454,6 +454,7 @@ a
 {
 	font-size: 18px;
 	font-weight: 700;
+	margin-left: 15px;
 }
 .calculating__result span
 {
@@ -777,4 +778,25 @@ a
 	{
 		opacity: 1;
 	}
+}
+#cvet{
+	width: 170px;
+	align-items: center;
+    background: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 20%);
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    height: 50px;
+    justify-content: center;
+    outline: 0;
+    padding: 0 10px;
+    text-align: center;
+    transition: .3s all;
+}
+
+.option{
+	width: 320px;
+
 }

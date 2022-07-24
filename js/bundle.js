@@ -13,10 +13,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
     function  calc() {
-    const prices = [
-        20, 30, 50, 10, 25, 90, 55
+        const country =  [
+        {name: "Витебск", price: "100"},
+        {name: "Минск", price: "200"},
+        {name: "Гродно", price: "300"}   
+    ]
+
+     const prices = [
+        10, 15, 1, 2, 3, 4, 5
       ];
-      
+    
       let current_price = 0;
       
       const buttons = document.querySelectorAll('.calculating__choose-item');
@@ -1783,7 +1789,7 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    const modalTimerId = setTimeout(() => (0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.openModal)('.modal', modalTimerId), 300000);
+    const modalTimerId = setTimeout(() => (0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.openModal)('.modal', modalTimerId), 3000000);
 
     // tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     (0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__["default"])('[data-modal]', '.modal', modalTimerId)

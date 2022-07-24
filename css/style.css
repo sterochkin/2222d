@@ -121,10 +121,10 @@ a
 	display: flex;
 	flex-direction: column;
 	height: 400px;
-	justify-content: space-between;
-	left: 45px;
+	justify-content: space-around;
+	left: 25px;
 	position: fixed;
-	top: 240px;
+	top: 100px;
 	width: 25px;
     z-index: 1000;
 }
@@ -696,6 +696,11 @@ a
 	padding: 40px;
 	position: relative;
 	width: 100%;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.modal__content h2{
+	margin-bottom: 15px;
 }
 .modal__close
 {

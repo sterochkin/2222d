@@ -446,7 +446,7 @@ a
 {
 	align-items: center;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	margin: 0 auto;
 	width: 490px;
 }
@@ -730,8 +730,23 @@ a
 	width: 280px;
 }
 .modal_contact li{
-	text-align: center;
-	line-height: 25px;
+	line-height: 40px;
+	list-style-type: none;
+	font-size: 25px;
+	display: flex;
+	align-items: center;
+}
+.modal_contact li a{
+	color: #808080;
+}
+.modal_contact li a:hover{
+	color: #54ed39;
+}
+.modal_contact img{
+	text-align:center;
+	width: 25x;
+	height: 25px;
+	margin-right: 10px;
 }
 .modal .btn
 {

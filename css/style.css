@@ -779,7 +779,7 @@ a
 		opacity: 1;
 	}
 }
-#cvet{
+.city_container{
 	width: 170px;
 	align-items: center;
     background: #fff;

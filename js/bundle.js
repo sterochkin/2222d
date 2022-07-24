@@ -12,12 +12,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-    function  calc() {
-        const country =  [
-        {name: "Витебск", price: "100"},
-        {name: "Минск", price: "200"},
-        {name: "Гродно", price: "300"}   
-    ]
+   function  calc() {
+
+    // const city_container = document.querySelector('.city-container'),
+    //       shipping_cost_out = document.querySelector('.shipping-cost_out');
+    // const fragment = document.createDocumentFragment();
+
+    // const city_list = [
+    //   {name: "Витебск", shipping_const: 100},
+    //   {name: "Минск", shipping_const: 100},
+    //   {name: "Гродно", shipping_const: 100}
+    // ];
+
+    // function AddCityList()
+    // {
+    //   for(let i = 0; i < city_list.length; i++){
+    //     const element = document.createElement('option')
+
+    //     element.className = 'city-container_element';
+    //     element.value = `${i}`;
+    //     element.textContent = `${city_list[i].name}`;
+
+    //     fragment.append(element);
+    //   }
+    //   city_container.append(fragment)
+    // }
+    
+    // city_container.addEventListener('change', function(){
+    //   ShowShippingCost(city_container.selectedIndex)
+    // })
+    // function ShowShippingCost(city_index){
+    //   shipping_cost_out.textContent = `${city_list[city_index].shipping_cost}`
+    // }
+    
+    // AddCityList()
+    // ShowShippingCost(1)
 
      const prices = [
         10, 15, 1, 2, 3, 4, 5
@@ -46,6 +75,7 @@ __webpack_require__.r(__webpack_exports__);
           else price_out.textContent = '___';
         });
     }
+
 }
     /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (calc);
 

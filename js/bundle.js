@@ -95,15 +95,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function char(){
 
-  document.querySelectorAll('.tabheader_char-item').forEach(item => {
-    item.addEventListener('click', () => {
-     const button = document.querySelector('.tabheader_char-item-active');
+const buttons = document.querySelectorAll(".tabheader_char-item");
 
-     button.classList.add('tabheader_char-item-active');
-
-     button.classList.remove('tabheader_char-item-active'); 
-  });
-});
+for (var button of buttons) {
+   button.addEventListener('click', function () {
+     buttons.forEach(i => i.classList.remove('tabheader_char-item-active'));
+   
+     this.classList.toggle('tabheader_char-item-active');
+   });
+};
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (char);
 

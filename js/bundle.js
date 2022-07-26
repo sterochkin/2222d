@@ -97,7 +97,7 @@ function char(){
 
 const buttons = document.querySelectorAll(".tabheader_char-item");
 
-for (var button of buttons) {
+for (const button of buttons) {
    button.addEventListener('click', function () {
      buttons.forEach(i => i.classList.remove('tabheader_char-item-active'));
    

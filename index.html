@@ -33,7 +33,7 @@
         <div class="container">
             <div class="tabcontainer">
                 <div class="tabcontent">
-                    <img src="http://placehold.jp/850x570.png" alt="vegy">
+                    <img class = "preview_img" src="http://placehold.jp/850x570.png" alt="gusto">
                     <div class="tabcontent__descr">
                         Дровяная печь  - это способ испечь пиццу, хлеб, жаркое, мясо,
                         рыбу и овощи, пудинги, в общем, все то, что вы можете сделать в
@@ -62,16 +62,41 @@
                 </div> -->
                 <div class="tabheader">
                     <div class="tabheader_char">
-                        <div class="tabheader_char-item tabheader_char-item-active">Gusto</div>
-                        <div class="tabheader_char-item">Cheif</div>
+                        <div class="tabheader_char-item gusto tabheader_char-item-active ">Gusto</div>
+                        <div class="tabheader_char-item cheif">Cheif</div>
                     </div>
                     <div class="tabheader__item">
-                        <div class="tabheader__item tabheader__item tabheader__item_active">Характеристики:</div>
-                        <div class="tabheader__item">Вес: 68 кг</div>
-                        <div class="tabheader__item">Поверхность для приготовления: 600 x 400 (мм)</div>
-                        <div class="tabheader__item">Размер устья печи: 185 x 470 (мм) </div>
-                        <div class="tabheader__item">Нагрев до рабочей температуры: 20 мин</div>
-                        <div class="tabheader__item">Расход дров: 2 кг/ч</div>
+                        <div class="tabheader__item tabheader__item-h2">Характеристики:</div>
+                        <div class="tabheader__item">
+                            <div class="tabheader__item_text">
+                                <p>Вес:</p>
+                                <h3 class="info">64кг</h3>
+                            </div>
+                        </div>
+                        <div class="tabheader__item">
+                            <div class="tabheader__item_text">
+                                <p>Поверхность для приготовления:</p>
+                                <h3 class="info">600x400(мм)</h3>
+                            </div>
+                        </div>
+                        <div class="tabheader__item">
+                            <div class="tabheader__item_text">
+                                <p>Размер устья печи:</p>
+                                <h3 class="info">185x470(мм)</h3>
+                            </div>   
+                        </div>
+                        <div class="tabheader__item">
+                            <div class="tabheader__item_text">
+                                <p>Нагрев до рабочей температуры:</p>
+                                <h3 class="info">20 мин</h3>
+                            </div>  
+                        </div>
+                        <div class="tabheader__item">
+                            <div class="tabheader__item_text">
+                                <p>Расход дров:</p>
+                                <h3 class="info">2 кг/ч</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,7 +202,9 @@
                 Выберите город:
               </div>
               <div class="calculating__choose">
-                <select class="city_container"></select>
+                <select class="city_container">
+                    <option value=""></option>
+                </select>
               </div>
             
     

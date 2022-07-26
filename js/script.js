@@ -9,15 +9,15 @@ import calc from './modules/calc';
 import forms from './modules/forms';
 import slider from './modules/slider';
 import timer from './modules/timer';
-import {openModal} from './modules/modal';
-import char from './modules/char';
+// import {openModal} from './modules/modal';
+import char from './modules/char'
 
 window.addEventListener('DOMContentLoaded', () => {
 
     const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 300000);
 
     // tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
-    modal('[data-modal]', '.modal', modalTimerId)
+    // modal('[data-modal]', '.modal', modalTimerId)
     calc()
     char()
     // cards()

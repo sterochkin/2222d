@@ -82,10 +82,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./js/modules/char":
-/*!*************************!*\
-  !*** ./js/modules/char ***!
-  \*************************/
+/***/ "./js/modules/char.js":
+/*!****************************!*\
+  !*** ./js/modules/char.js ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -96,15 +96,28 @@ __webpack_require__.r(__webpack_exports__);
 function char(){
 
 const buttons = document.querySelectorAll(".tabheader_char-item");
+const cheif = ['11кг','111x111(мм)', '111x111(мм)', '20 мин', '2 кг/ч']
+const gusto = ["64кг", "600x400(мм)", "185x470(мм)", "20 мин", "2 кг/ч"]
 
 for (const button of buttons) {
    button.addEventListener('click', function () {
-     buttons.forEach(i => i.classList.remove('tabheader_char-item-active'));
-   
+     buttons.forEach(i => i.classList.remove('tabheader_char-item-active')
+     );
+     if(this.classList.contains("gusto"))
+     {
+      document.querySelectorAll('.info').forEach((n, i) => n.textContent = gusto[i])
+      document.querySelector(".preview_img").src = 'http://placehold.jp/850x570.png';
+     }
+     else{
+      document.querySelectorAll('.info').forEach((n, i) => n.textContent = cheif[i])
+      document.querySelector(".preview_img").src = 'https://andinvest.ru/wp-content/uploads/2021/07/pticy-i-flag-850x570.jpg';
+     }
      this.classList.toggle('tabheader_char-item-active');
    });
 };
 }
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (char);
 
 /***/ }),
@@ -1832,7 +1845,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
 /* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/timer */ "./js/modules/timer.js");
-/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char");
+/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
 
 
@@ -1844,16 +1857,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+// import {openModal} from './modules/modal';
 
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    const modalTimerId = setTimeout(() => (0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.openModal)('.modal', modalTimerId), 300000);
+    const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 300000);
 
     // tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
-    (0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__["default"])('[data-modal]', '.modal', modalTimerId)
-    ;(0,_modules_calc__WEBPACK_IMPORTED_MODULE_2__["default"])()
+    // modal('[data-modal]', '.modal', modalTimerId)
+    (0,_modules_calc__WEBPACK_IMPORTED_MODULE_2__["default"])()
     ;(0,_modules_char__WEBPACK_IMPORTED_MODULE_6__["default"])()
     // cards()
     ;(0,_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])('form', modalTimerId)

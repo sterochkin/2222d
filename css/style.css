@@ -182,7 +182,7 @@ a
 }
 .preview
 {
-	padding: 28px 0 100px 0;
+	padding: 28px 0 160px 0;
 	position: relative;
 }
 .preview__life
@@ -230,44 +230,42 @@ a
 	line-height: 36px;
 	padding: 20px;
 	position: absolute;
-	right: -170px;
+	right: -220px;
     top: 370px;
-	width: 560px;
+    width: 520px;
 }
 .tabheader
 {
 	background-color: #fff;
 	padding: 5px 15px;
-	width: 300px;
+	min-width: 350px;
 }
 .tabheader h3
 {
 	font-size: 16px;
 	font-weight: 700;
 }
-.tabheader__items
-{
-	border-left: 1px solid #000;
-	margin-top: 1px;
-	padding-left: 26px;
-}
+
 .tabheader__item
 {
+	line-height: 30px;
 	color: rgba(0,0,0,.6);
-	cursor: pointer;
 	font-size: 18px;
 	font-weight: 300;
-	font-weight: 700;
 	margin-top: 10px;
 	transition: .3s all;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
-.tabheader__item_active
-{
-	color: #000;
-	font-size: 22px;
+.tabheader__item-h2{
 	font-weight: 700;
 	text-align: center;
-	margin-top: 25px;
+}
+.tabheader__item_text{
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
 }
 .offer
 {

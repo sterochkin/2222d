@@ -16,16 +16,17 @@
     //     const element = document.createElement('option')
 
     //     element.className = 'city-container_element';
-    //     element.value = `${i}`;
     //     element.textContent = `${city_list[i].name}`;
 
     //     fragment.append(element);
     //   }
     //   city_container.append(fragment)
+    //   console.log(city_container)
     // }
     
     // city_container.addEventListener('change', function(){
     //   ShowShippingCost(city_container.selectedIndex)
+    //   console.log(city_container)
     // })
     // function ShowShippingCost(city_index){
     //   shipping_cost_out.textContent = `${city_list[city_index].shipping_cost}`

@@ -10,6 +10,7 @@ import forms from './modules/forms';
 import slider from './modules/slider';
 import timer from './modules/timer';
 import {openModal} from './modules/modal';
+import char from './modules/char';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     modal('[data-modal]', '.modal', modalTimerId)
     calc()
+    char()
     // cards()
     forms('form', modalTimerId)
     slider({

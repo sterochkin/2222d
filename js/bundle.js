@@ -30,16 +30,17 @@ __webpack_require__.r(__webpack_exports__);
     //     const element = document.createElement('option')
 
     //     element.className = 'city-container_element';
-    //     element.value = `${i}`;
     //     element.textContent = `${city_list[i].name}`;
 
     //     fragment.append(element);
     //   }
     //   city_container.append(fragment)
+    //   console.log(city_container)
     // }
     
     // city_container.addEventListener('change', function(){
     //   ShowShippingCost(city_container.selectedIndex)
+    //   console.log(city_container)
     // })
     // function ShowShippingCost(city_index){
     //   shipping_cost_out.textContent = `${city_list[city_index].shipping_cost}`
@@ -78,6 +79,28 @@ __webpack_require__.r(__webpack_exports__);
 
 }
     /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (calc);
+
+/***/ }),
+
+/***/ "./js/modules/char":
+/*!*************************!*\
+  !*** ./js/modules/char ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function char(){
+
+  document.querySelectorAll('.button').forEach(item => item.addEventListener('click', () => {
+    document.querySelector('.next').classList.toggle('active');
+  }
+  ))
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (char);
 
 /***/ }),
 
@@ -1804,6 +1827,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
 /* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/timer */ "./js/modules/timer.js");
+/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
 
 
@@ -1817,13 +1841,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 window.addEventListener('DOMContentLoaded', () => {
 
-    const modalTimerId = setTimeout(() => (0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.openModal)('.modal', modalTimerId), 3000000);
+    const modalTimerId = setTimeout(() => (0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.openModal)('.modal', modalTimerId), 300000);
 
     // tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     (0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__["default"])('[data-modal]', '.modal', modalTimerId)
     ;(0,_modules_calc__WEBPACK_IMPORTED_MODULE_2__["default"])()
+    ;(0,_modules_char__WEBPACK_IMPORTED_MODULE_6__["default"])()
     // cards()
     ;(0,_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])('form', modalTimerId)
     ;(0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__["default"])({

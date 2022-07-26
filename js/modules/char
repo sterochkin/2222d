@@ -1,0 +1,8 @@
+function char(){
+
+  document.querySelectorAll('.button').forEach(item => item.addEventListener('click', () => {
+    document.querySelector('.next').classList.toggle('active');
+  }
+  ))
+}
+export default char

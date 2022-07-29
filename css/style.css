@@ -397,7 +397,7 @@ a
 .calculating__subtitle
 {
 	font-size: 18px;
-	font-weight: 700;
+	font-weight: 300;
 	margin-top: 30px;
 	text-align: center;
 }
@@ -471,10 +471,13 @@ a
 .calculating__total
 {
 	display: flex;
-	align-items: baseline;
-	justify-content: center;
-	margin: 0 auto;
-	width: 490px;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 755px;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 .calculating__result
 {
@@ -484,7 +487,19 @@ a
 }
 .calculating__result span
 {
-	font-size: 42px;
+	font-weight: 700;
+	font-size: 25px;
+}
+.shipping-cost
+{
+	font-size: 18px;
+	font-weight: 700;
+	margin-left: 15px;
+}
+.shipping-cost span
+{
+	font-size: 25px;
+	font-weight: 700;
 }
 .menu
 {

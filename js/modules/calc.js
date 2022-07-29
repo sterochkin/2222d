@@ -1,67 +1,87 @@
-   function  calc() {
+function calc(){
+const buttons = document.querySelectorAll('.calculating__choose-item'),
+      city_container = document.querySelector('.city_container'),
+      price_out = document.querySelector('.price_out'),
+      shipping_cost_out = document.querySelector('.shipping-cost_out'),
+      price_out_all = document.querySelector('.price_out_all');
 
-    // const city_container = document.querySelector('.city-container'),
-    //       shipping_cost_out = document.querySelector('.shipping-cost_out');
-    // const fragment = document.createDocumentFragment();
+const prices = [
+20, 30, 50, 10, 25, 90, 55
+];
 
-    // const city_list = [
-    //   {name: "Витебск", shipping_const: 100},
-    //   {name: "Минск", shipping_const: 100},
-    //   {name: "Гродно", shipping_const: 100}
-    // ];
+ const city_list = 
+ [
+   {name: "Витебск", shipping_cost: 100},
+   {name: "Минск", shipping_cost: 200},
+   {name: "Гродно", shipping_cost: 300}
+ ];
 
-    // function AddCityList()
-    // {
-    //   for(let i = 0; i < city_list.length; i++){
-    //     const element = document.createElement('option')
+let current_price = 0;
+let shipping_cost = 0;
 
-    //     element.className = 'city-container_element';
-    //     element.textContent = `${city_list[i].name}`;
 
-    //     fragment.append(element);
-    //   }
-    //   city_container.append(fragment)
-    //   console.log(city_container)
-    // }
-    
-    // city_container.addEventListener('change', function(){
-    //   ShowShippingCost(city_container.selectedIndex)
-    //   console.log(city_container)
-    // })
-    // function ShowShippingCost(city_index){
-    //   shipping_cost_out.textContent = `${city_list[city_index].shipping_cost}`
-    // }
-    
-    // AddCityList()
-    // ShowShippingCost(1)
+function CreateDeliveryCities() {
 
-     const prices = [
-        10, 15, 1, 2, 3, 4, 5
-      ];
-    
-      let current_price = 0;
-      
-      const buttons = document.querySelectorAll('.calculating__choose-item');
-      const price_out = document.querySelector('.price_out');
-      
-      for(let i = 0; i < buttons.length; i++)
-      {
-        buttons[i].addEventListener('click', function()
-        {
-          if(this.classList.contains('calculating__choose-item_active'))
-          {
-            this.classList.remove('calculating__choose-item_active');
-            current_price -= prices[i];
-          }
-          else {
-            this.classList.add('calculating__choose-item_active');
-            current_price += prices[i];
-          }
-      
-          if(current_price > 0) price_out.textContent = `${current_price}`;
-          else price_out.textContent = '___';
-        });
-    }
+const fragment = document.createDocumentFragment();
 
+prices.map((elem) => {
+const option_node = document.createElement('option');
+
+option_node.className = 'city_container';
+option_node.textContent = `${elem.name}`;
+
+fragment.append(option_node);
+})
+
+city_container.append(fragment);
+
+city_container.addEventListener('change', function() {
+
+shipping_cost = prices[city_list.selectedIndex].shipping_cost;
+ShowPrices();
+})
+
+shipping_cost = prices[0].shipping_cost;
+ShowPrices();
 }
-    export default calc;
+
+function CreateButtonsHandler() {
+
+for (let i = 0; i < buttons.length; i++) {
+
+buttons[i].addEventListener('click', function() {
+
+if (this.classList.contains('calculating__choose-item_active')) {
+
+  this.classList.remove('calculating__choose-item_active');
+  current_price -= prices[i];
+}
+else {
+
+  this.classList.add('calculating__choose-item_active');
+  current_price += prices[i];
+}
+
+ShowPrices();
+});
+}
+}
+
+function ShowPrices()
+{
+if(shipping_cost > 0) {
+price_out.textContent = `${current_price}`;
+shipping_cost_out.textContent = `${shipping_cost}`;
+price_out_all.textContent = `${current_price + shipping_cost}`;
+} 
+else {
+price_out.textContent = '__';
+shipping_cost_out.textContent = '__';
+price_out_all.textContent = '__';
+}
+}
+
+CreateButtonsHandler();
+CreateDeliveryCities();
+}
+export default calc;

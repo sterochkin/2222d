@@ -25,6 +25,7 @@ const prices = [
 
  const city_list = 
  [
+   {name: " ", shipping_cost: 0},
    {name: "Витебск", shipping_cost: 100},
    {name: "Минск", shipping_cost: 200},
    {name: "Гродно", shipping_cost: 300}
@@ -38,7 +39,7 @@ function CreateDeliveryCities() {
 
 const fragment = document.createDocumentFragment();
 
-prices.map((elem) => {
+city_list.map((elem) => {
 const option_node = document.createElement('option');
 
 option_node.className = 'city_container';
@@ -51,7 +52,7 @@ city_container.append(fragment);
 
 city_container.addEventListener('change', function() {
 
-shipping_cost = prices[city_list.selectedIndex].shipping_cost;
+shipping_cost = city_list[city_container.selectedIndex].shipping_cost;
 ShowPrices();
 })
 
@@ -83,15 +84,15 @@ ShowPrices();
 
 function ShowPrices()
 {
-if(shipping_cost > 0) {
+if(shipping_cost >= 0) {
 price_out.textContent = `${current_price}`;
 shipping_cost_out.textContent = `${shipping_cost}`;
 price_out_all.textContent = `${current_price + shipping_cost}`;
 } 
 else {
-price_out.textContent = '__';
-shipping_cost_out.textContent = '__';
-price_out_all.textContent = '__';
+price_out.textContent = `${current_price}`;
+shipping_cost_out.textContent = '0';
+price_out_all.textContent = `${current_price}`;
 }
 }
 

@@ -6,12 +6,12 @@ const buttons = document.querySelectorAll('.calculating__choose-item'),
       price_out_all = document.querySelector('.price_out_all');
 
 const prices = [
-20, 30, 50, 10, 25, 90, 55
+20, 30, 25, 90, 55
 ];
 
  const city_list = 
  [
-   {name: " ", shipping_cost: 0},
+   {name: "Не выбрано", shipping_cost: 0},
    {name: "Витебск", shipping_cost: 100},
    {name: "Минск", shipping_cost: 200},
    {name: "Гродно", shipping_cost: 300}

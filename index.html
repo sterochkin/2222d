@@ -6,6 +6,7 @@
     <title>ALHA</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="/icons/mini_logo.png" type="image/png">
+    <link rel="stylesheet" href="css/adaptive-slider.css">
 </head>
 <body>
     <header class="header">
@@ -24,9 +25,6 @@
         <a href="instagram.com" class="sidepanel__icon">
             <img src="icons/instagram.svg" alt="instagram">
         </a>
-        <!-- <a href="#" class="sidepanel__icon">
-            <img src="icons/facebook.svg" alt="facebook">
-        </a> -->
     </div>
 
     <div class="preview">
@@ -43,24 +41,6 @@
                         Легко перемещается и удобна в использовании.
                     </div>
                 </div>
-                <!-- <div class="tabcontent">
-                    <img src="http://placehold.jp/850x570.png" alt="elite">
-                    <div class="tabcontent__descr">
-                        Меню “Премиум” - мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!                                     
-                    </div>
-                </div>
-                <div class="tabcontent">
-                    <img src="http://placehold.jp/850x570.png" alt="vegy">
-                    <div class="tabcontent__descr">
-                        Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все будет Ом!                                     
-                    </div>
-                </div>
-                <div class="tabcontent">
-                    <img src="http://placehold.jp/850x570.png" alt="vegy">
-                    <div class="tabcontent__descr">
-                        
-                    </div>
-                </div> -->
                 <div class="tabheader">
                     <div class="tabheader_char">
                         <div class="tabheader_char-item gusto tabheader_char-item-active ">Gusto</div>
@@ -108,24 +88,8 @@
     <div class="divider"></div>
 
     <div class="offer">
-        <!-- <div class="bgc_y"></div>
-        <div class="container">
-            <div class="offer__text">
-                <h2 class="title">Что мы можем вам предложить?</h2>
-                <div class="offer__descr">
-                    Наша основная идея - это правильное питание. Оно может быть простым и вкусным. Мы не просто доставка, мы сервис! Мы взяли на себя все расчеты БЖУ, калорийности, объемов порций и прочие важные, но скучные аспекты. Вам остается только полезная, сытная и правильная еда, которую мы привозим прямо под дверь.
-                </div>
-            </div>
-            <div class="offer__action">
-                <button class="btn btn_dark" data-modal>Связаться с нами</button>
-            </div>
-        </div> -->
         <div class="container">
             <div class="offer__advantages">
-                <!-- <h2>Быстро и полезно</h2>
-                <div class="offer__advantages-text">
-                    Готовка дома занимает много сил, времени и нервов. Мы привозим еду сразу на целый день, и ты можешь действовать так, как тебе удобно, не подстраиваясь ни под кого и будучи уверенным в качестве продукта!
-                </div> -->
                 <h2>Дополнительные фукции:</h2>
                 <div class="offer__advantages-text">                                       
                     <ul>
@@ -192,8 +156,6 @@
               Доп. комплектация:
             </div>
             <div class="calculating__choose">
-              <div class="calculating__choose-item">Столик боковой</div>
-              <div class="calculating__choose-item">Комплект ножек с колесом</div>
               <div class="calculating__choose-item">Зона барбекю Lite</div>
               <div class="calculating__choose-item">Зона барбекю Average</div>
               <div class="calculating__choose-item">Зона барбекю Pro </div>
@@ -211,20 +173,20 @@
             <div class="calculating__divider"></div>
     
             <div class="calculating__total">
-              <div class="calculating__subtitle">
+              <div class="calculating__subtitle none">
                 Стоимость комплектации:
               </div>
-              <div class="calculating__result">
+              <div class="calculating__result none">
                 <span class="price_out">____</span> руб
               </div>
-              <div class="calculating__subtitle">
+              <div class="calculating__subtitle none">
                Стоимость доставки:
               </div>
-              <div class="shipping-cost">
+              <div class="shipping-cost none">
                 <span class="shipping-cost_out">____</span> руб
               </div>
               <div class="calculating__subtitle">
-                Итого:
+                Стоимость:
             </div>
             <div class="calculating__result">
                 <span class="price_out_all">____</span> руб
@@ -235,49 +197,26 @@
           </div>
         </div>
       </div>
-    
-     
 
-    <div class="promotion">
-        <div class="bgc_y"></div>
-        <div class="container">
-            <div class="promotion__text">
-                <div class="title">Акция для новых клиентов!</div>
-                <div class="promotion__descr">
-                    Описание предложения, далее скидка... <span>20%!</span>
-                    <br><br>
-                    Акция закончится 1 августа в 00:00
-                </div>
-            </div>
-            <div class="promotion__timer">
-                <div class="title">Осталось до конца акции:</div>
-                <div class="timer">
-                    <div class="timer__block">
-                        <span id="days">12</span>
-                        дней
-                    </div>
-                    <div class="timer__block">
-                        <span id="hours">20</span>
-                        часов
-                    </div>
-                    <div class="timer__block">
-                        <span id="minutes">56</span>
-                        минут
-                    </div>
-                    <div class="timer__block">
-                        <span id="seconds">20</span>
-                        секунд
-                    </div>
-                </div>
-            </div>
+    <div class="slperekhodnik">
+
+        <aside class="gablok_sedakoda">
+        <div class="slayder_karusel">
+        <figure><img src="https://via.placeholder.com/700x400" alt=""><figcaption>Ком1</figcaption></figure>
+        <figure><img src="https://via.placeholder.com/700x400" alt=""><figcaption>Ком2</figcaption></figure>
+        <figure><img src="https://via.placeholder.com/700x400" alt=""><figcaption>Ком3</figcaption></figure>
+        <figure><img src="https://via.placeholder.com/700x400" alt=""><figcaption>Ком4</figcaption></figure>
+        <figure><img src="https://via.placeholder.com/700x400" alt=""><figcaption>Ком5</figcaption></figure>
         </div>
-    </div>
+        </aside>
+           
+        </div>
 
     <footer class="footer">
         <div class="container">
             <div class="social">
                 <div class="subtitle">Мы в социальных сетях:</div>
-                <a href="#" class="link"><img class ="footer_img" src="icons/inst.png" width ="20px" alt="instagram"> instagram</a>
+                <a href="#" class="link"><img class ="footer_img" src="icons/inst.png" width ="20px" alt="instagram"> Instagram</a>
                 
             </div>
             <div class="pepper">
@@ -289,28 +228,9 @@
                 <a href="mailto:alha_fire@mail.ru" class="link">alha_fire@mail.ru</a>
             </div>
         </div>
-    </footer>
 
-    <div class="modal">
-        <div class="modal__dialog">
-            <div class="modal__content">
-                <form action="#">
-                    <div class="modal__close" data-close>&times;</div>
-                    <h2>Наши контакты:</h2>
-                    <ul class="modal_contact">
-                        <li><img src="icons/phone.png"> <a href="tel:+375298150090">+375298150090</a></li>
-                        <li><img src="icons/mail.png"> <a href="mailto:alha_fire@mail.ru">alha_fire@mail.ru</a></li>
-                        <li><img src="icons/inst.png"> <a href="instagram.com">alha_fire</a></li>
-                    </ul>
-                    <!-- <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div> -->
-                    <!-- <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
-                    <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input"> -->
-                    <!-- <button class="btn btn_dark btn_min">Перезвонить мне</button> -->
-                </form>
-            </div>
-        </div>
-    </div>
-    
+        <p class="copyright">&copy; Copyright 2022 | Все права защищены</p>
+    </footer>
     <script src="js/bundle.js"></script>
 </body>
 </html>

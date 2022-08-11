@@ -11,11 +11,11 @@ for (const button of buttons) {
      if(this.classList.contains("gusto"))
      {
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = gusto[i])
-      document.querySelector(".preview_img").src = '/img/gusto.png';
+      document.querySelector(".preview_img").src = '/img/Gusto.png';
      }
      else{
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = cheif[i])
-      document.querySelector(".preview_img").src = '/img/cheif.png';
+      document.querySelector(".preview_img").src = '/img/Cheif.png';
      }
      this.classList.toggle('tabheader_char-item-active');
    });

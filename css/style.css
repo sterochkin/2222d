@@ -6,12 +6,13 @@
 	margin: 0;
 	padding: 0;
 }
-body{
-	background: url('../img/fon1.png');
+/* body{
+	background: url('../img/fon1.jpg');
 	background-position:center;
     background-repeat: no-repeat;
-   background-attachment: fixed;
-}
+    background-attachment: fixed;
+    background-size: contain;
+} */
 a
 {
 	text-decoration: none;
@@ -67,12 +68,7 @@ a
 	font-size: 36px;
 	font-weight: 400;
 }
-.header
-{
-	align-items: center;
-	display: flex;
-	height: 150px;
-}
+
 .header h2{
     display: block;
     text-align: center;
@@ -188,7 +184,7 @@ a
 }
 .preview
 {
-	padding: 28px 0 160px 0;
+	padding: 28px 0 180px 0;
 	position: relative;
 }
 .preview__life
@@ -236,9 +232,9 @@ a
 	line-height: 36px;
 	padding: 20px;
 	position: absolute;
-	right: -220px;
-    top: 370px;
-    width: 520px;
+	right: -230px;
+    top: 390px;
+    width: 515px;
 }
 .tabheader
 {
@@ -272,8 +268,41 @@ a
 	display: flex;
 	justify-content: space-between;
     align-items: center;
+	
 }
-.offer
+.complectations{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.complectations h2{
+	text-align: center;
+}
+.complectations__button{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 25px;
+}
+.complectations__button-item{
+	align-items: center;
+	background: #fff;
+	border: none;
+	box-shadow: 0 4px 15px rgba(0,0,0,.2);
+	cursor: pointer;
+	display: flex;
+	font-size: 14px;
+	height: 50px;
+	justify-content: center;
+	outline: 0;
+	padding: 0 10px;
+	text-align: center;
+	transition: .3s all;
+	width: 170px;
+}
+.complectations__button-item-active{
+	background-color: #54ed39;
+	color: #fff;
+}
+/* .offer
 {
 	padding: 70px 0 100px 0;
 	position: relative;
@@ -384,7 +413,7 @@ a
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
-}
+} */
 .calculating
 {
 	padding: 50px 0;
@@ -788,10 +817,7 @@ a
 	vertical-align: bottom;
 	}
 	
-	.slayder_karusel img:hover{
-	filter: grayscale(90%);
-	}
-	
+/* 	
 	.slayder_karusel figure figcaption{
 	position: absolute;
 	font-family: 'Roboto';
@@ -803,7 +829,7 @@ a
 	color: #fff;
 	width: 100%;
 	padding: .5em;
-	}
+	} */
 	
 	@keyframes gablok_sedakoda-ani{
 	0%{

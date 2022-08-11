@@ -117,8 +117,8 @@ __webpack_require__.r(__webpack_exports__);
 function char(){
 
 const buttons = document.querySelectorAll(".tabheader_char-item");
-const cheif = ['11кг','111x111(мм)', '111x111(мм)', '20 мин', '2 кг/ч']
-const gusto = ["64кг", "600x400(мм)", "185x470(мм)", "20 мин", "2 кг/ч"]
+const cheif = ['11кг','111x111(мм)', '111x111(мм)', '20 мин', '2 кг/ч', '1500р']
+const gusto = ["64кг", "600x400(мм)", "185x470(мм)", "20 мин", "2 кг/ч", '1810р']
 
 for (const button of buttons) {
    button.addEventListener('click', function () {
@@ -127,11 +127,11 @@ for (const button of buttons) {
      if(this.classList.contains("gusto"))
      {
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = gusto[i])
-      document.querySelector(".preview_img").src = 'http://placehold.jp/850x570.png';
+      document.querySelector(".preview_img").src = '/img/gusto.png';
      }
      else{
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = cheif[i])
-      document.querySelector(".preview_img").src = 'https://andinvest.ru/wp-content/uploads/2021/07/pticy-i-flag-850x570.jpg';
+      document.querySelector(".preview_img").src = '/img/cheif.png';
      }
      this.classList.toggle('tabheader_char-item-active');
    });
@@ -204,7 +204,7 @@ function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCo
         margin-right: 15%;
         margin-left: 15%;
         list-style: none;
-    `; // Если хотите - добавьте в стили, но иногда у нас нет доступа к стилям
+    `; 
     slider.append(indicators);
 
     for (let i = 0; i < slides.length; i++) {
@@ -1617,16 +1617,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
     (0,_modules_calc__WEBPACK_IMPORTED_MODULE_1__["default"])()
     ;(0,_modules_char__WEBPACK_IMPORTED_MODULE_3__["default"])()
-    ;(0,_modules_slider__WEBPACK_IMPORTED_MODULE_2__["default"])({
-        container: '.offer__slider',
-        slide: '.offer__slide',
-        nextArrow: '.offer__slider-next',
-        prevArrow: '.offer__slider-prev',
-        totalCounter: '#total',
-        currentCounter: '#current',
-        wrapper: '.offer__slider-wrapper',
-        field: '.offer__slider-inner'
-    })
+    // slider({
+    //     container: '.offer__slider',
+    //     slide: '.offer__slide',
+    //     nextArrow: '.offer__slider-next',
+    //     prevArrow: '.offer__slider-prev',
+    //     totalCounter: '#total',
+    //     currentCounter: '#current',
+    //     wrapper: '.offer__slider-wrapper',
+    //     field: '.offer__slider-inner'
+    // })
 
 })  
 

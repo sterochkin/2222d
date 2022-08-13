@@ -48,6 +48,10 @@ a
 	margin: 0 auto;
 	max-width: 1400px;
 }
+.container2
+{
+	margin: 0 auto;
+}
 .divider
 {
 	background-color: rgba(0,0,0,.5);
@@ -156,17 +160,111 @@ a
 	font-weight: bold;
 }
 .cheifsize{
-	padding: 30px;
+	margin-bottom: 20px;
 }
-.cheifsize__setting-right{
-	
+.cheifsize__button{
+	margin-top: 15px;
+}
+.cheifsize__info-text{
+	margin-top: 15px;
+	font-size: 20px;
+}
+.cheifsize__button{
+	display: flex;
+	justify-content: space-evenly
+}
+.cheifsize__button-style{
+	align-items: center;
+    background: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 20%);
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    height: 50px;
+    justify-content: center;
+    outline: 0;
+    padding: 0 10px;
+    text-align: center;
+    transition: .3s all;
+    width: 170px;
+}
+.cheifsize__button-style-active{
+	background-color: #54ed39;
+    color: #fff;
+}
+.cheifsize__button-price{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 3px;
+}
+.cheifsize__setting-left{
+	max-width: 500px;
+	text-align: center;
+}
+.cheifsize__setting-left h2{
+	font-size: 40px;
 }
 .cheifsize__setting{
 	display: flex;
+	align-content: center;
+	justify-content: center;
 }
 .cheifsize_img img{
-	width: 550px;
-	height: 350px;
+	width: 600px;
+    height: 400px;
+}
+.cheifsize__info{
+	margin-top: 30px;
+	line-height: 30px;
+}
+.sizediv{
+	width: 100%;
+	height: 50px;
+	background: #293036;
+}
+.delivery{
+	width: 100%;
+	background: #293036;
+}
+.delivery__setting{
+	display: flex;
+    justify-content: center;
+}
+.delivery__city{
+	color: #fff;
+	margin-left: 50px;
+	font-size: 20px;
+	margin-top: 35px;
+}
+
+.delivery__city span{
+	color: #ffaf61;
+}
+.delivery__city-input{
+	display: flex;
+	justify-content: center;
+	margin-top: 35px;
+}
+.delivery__city-input select{
+	margin-left: 30px;
+	width: 195px;
+	font-size: 18px;
+}
+.allprice__setting{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.divider_price{
+	background-color: rgba(0,0,0,.5);
+    height: 1px;
+    margin: 0 auto;
+    width: 330px;
+}
+.detailedprice li{
+	display: flex;
+	justify-content: space-between;
 }
 .tabheader_char{
 	display: flex;

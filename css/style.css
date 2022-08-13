@@ -260,11 +260,21 @@ a
 	background-color: rgba(0,0,0,.5);
     height: 1px;
     margin: 0 auto;
-    width: 330px;
+    width: 1000px;
 }
 .detailedprice li{
 	display: flex;
 	justify-content: space-between;
+}
+.detailedprice li{
+	list-style-type: disc;
+}
+.detailedprice{
+	min-width: 1000px;
+}
+.bold{
+	font-weight: bold;
+	font-size: 30px;
 }
 .tabheader_char{
 	display: flex;

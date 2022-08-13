@@ -8,7 +8,7 @@ import char from './modules/char'
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    calc()
+    // calc()
     char()
     // slider({
     //     container: '.offer__slider',

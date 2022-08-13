@@ -5,101 +5,96 @@
 /*!****************************!*\
   !*** ./js/modules/calc.js ***!
   \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function calc(){
-const buttons = document.querySelectorAll('.calculating__choose-item'),
-      city_container = document.querySelector('.city_container'),
-      price_out = document.querySelector('.price_out'),
-      shipping_cost_out = document.querySelector('.shipping-cost_out'),
-      price_out_all = document.querySelector('.price_out_all');
+// function calc(){
+// const buttons = document.querySelectorAll('.calculating__choose-item'),
+//       city_container = document.querySelector('.city_container'),
+//       price_out = document.querySelector('.price_out'),
+//       shipping_cost_out = document.querySelector('.shipping-cost_out'),
+//       price_out_all = document.querySelector('.price_out_all');
 
-const prices = [
-20, 30, 25, 90, 55
-];
+// const prices = [
+// 20, 30, 25, 90, 55
+// ];
 
- const city_list = 
- [
-   {name: "Не выбрано", shipping_cost: 0},
-   {name: "Витебск", shipping_cost: 100},
-   {name: "Минск", shipping_cost: 200},
-   {name: "Гродно", shipping_cost: 300}
- ];
+//  const city_list = 
+//  [
+//    {name: "Не выбрано", shipping_cost: 0},
+//    {name: "Витебск", shipping_cost: 100},
+//    {name: "Минск", shipping_cost: 200},
+//    {name: "Гродно", shipping_cost: 300}
+//  ];
 
-let current_price = 0;
-let shipping_cost = 0;
+// let current_price = 0;
+// let shipping_cost = 0;
 
 
-function CreateDeliveryCities() {
+// function CreateDeliveryCities() {
 
-const fragment = document.createDocumentFragment();
+// const fragment = document.createDocumentFragment();
 
-city_list.map((elem) => {
-const option_node = document.createElement('option');
+// city_list.map((elem) => {
+// const option_node = document.createElement('option');
 
-option_node.className = 'city_container';
-option_node.textContent = `${elem.name}`;
+// option_node.className = 'city_container';
+// option_node.textContent = `${elem.name}`;
 
-fragment.append(option_node);
-})
+// fragment.append(option_node);
+// })
 
-city_container.append(fragment);
+// city_container.append(fragment);
 
-city_container.addEventListener('change', function() {
+// city_container.addEventListener('change', function() {
 
-shipping_cost = city_list[city_container.selectedIndex].shipping_cost;
-ShowPrices();
-})
+// shipping_cost = city_list[city_container.selectedIndex].shipping_cost;
+// ShowPrices();
+// })
 
-shipping_cost = prices[0].shipping_cost;
-ShowPrices();
-}
+// shipping_cost = prices[0].shipping_cost;
+// ShowPrices();
+// }
 
-function CreateButtonsHandler() {
+// function CreateButtonsHandler() {
 
-for (let i = 0; i < buttons.length; i++) {
+// for (let i = 0; i < buttons.length; i++) {
 
-buttons[i].addEventListener('click', function() {
+// buttons[i].addEventListener('click', function() {
 
-if (this.classList.contains('calculating__choose-item_active')) {
+// if (this.classList.contains('calculating__choose-item_active')) {
 
-  this.classList.remove('calculating__choose-item_active');
-  current_price -= prices[i];
-}
-else {
+//   this.classList.remove('calculating__choose-item_active');
+//   current_price -= prices[i];
+// }
+// else {
 
-  this.classList.add('calculating__choose-item_active');
-  current_price += prices[i];
-}
+//   this.classList.add('calculating__choose-item_active');
+//   current_price += prices[i];
+// }
 
-ShowPrices();
-});
-}
-}
+// ShowPrices();
+// });
+// }
+// }
 
-function ShowPrices()
-{
-if(shipping_cost >= 0) {
-price_out.textContent = `${current_price}`;
-shipping_cost_out.textContent = `${shipping_cost}`;
-price_out_all.textContent = `${current_price + shipping_cost}`;
-} 
-else {
-price_out.textContent = `${current_price}`;
-shipping_cost_out.textContent = '0';
-price_out_all.textContent = `${current_price}`;
-}
-}
+// function ShowPrices()
+// {
+// if(shipping_cost >= 0) {
+// price_out.textContent = `${current_price}`;
+// shipping_cost_out.textContent = `${shipping_cost}`;
+// price_out_all.textContent = `${current_price + shipping_cost}`;
+// } 
+// else {
+// price_out.textContent = `${current_price}`;
+// shipping_cost_out.textContent = '0';
+// price_out_all.textContent = `${current_price}`;
+// }
+// }
 
-CreateButtonsHandler();
-CreateDeliveryCities();
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (calc);
+// CreateButtonsHandler();
+// CreateDeliveryCities();
+// }
+// export default calc;
 
 /***/ }),
 
@@ -122,10 +117,10 @@ const buttons = document.querySelectorAll(".tabheader_char-item");
 const cheif = ['11кг','111x111(мм)', '111x111(мм)', '20 мин', '2 кг/ч', '1500р']
 const gusto = ["64кг", "600x400(мм)", "185x470(мм)", "20 мин", "2 кг/ч", '1810р']
 
-preview.forEach(img => {
-  img.addEventListener('click', () => {
-    preview.forEach((color) => color.classList.remove('preview_small-img-active'));
-    img.classList.add('preview_small-img-active');
+preview.forEach(border => {
+  border.addEventListener('click', () => {
+    preview.forEach((border) => border.classList.remove('preview_small-img-active'));
+    border.classList.add('preview_small-img-active');
   });
 })
 
@@ -145,10 +140,16 @@ for (const button of buttons) {
      {
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = gusto[i])
       document.querySelector(".preview_img").src = '/img/Gusto.png';
+      document.querySelector(".foto1").src = '/img/gusto/1.png'
+      document.querySelector(".foto2").src = '/img/gusto/2.png'
+      document.querySelector(".foto3").src = '/img/gusto/3.png'
      }
      else{
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = cheif[i])
       document.querySelector(".preview_img").src = '/img/Cheif.png';
+      document.querySelector(".foto1").src = '/img/cheif/1.png'
+      document.querySelector(".foto2").src = '/img/cheif/2.png'
+      document.querySelector(".foto3").src = '/img/cheif/3.png'
      }
      this.classList.toggle('tabheader_char-item-active');
    });
@@ -1620,6 +1621,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nodelist-foreach-polyfill */ "./node_modules/nodelist-foreach-polyfill/index.js");
 /* harmony import */ var nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/calc */ "./js/modules/calc.js");
+/* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_calc__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
 /* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
@@ -1632,8 +1634,8 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    (0,_modules_calc__WEBPACK_IMPORTED_MODULE_1__["default"])()
-    ;(0,_modules_char__WEBPACK_IMPORTED_MODULE_3__["default"])()
+    // calc()
+    (0,_modules_char__WEBPACK_IMPORTED_MODULE_3__["default"])()
     // slider({
     //     container: '.offer__slider',
     //     slide: '.offer__slide',

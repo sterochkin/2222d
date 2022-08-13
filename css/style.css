@@ -84,7 +84,7 @@ a
 }
 .preview
 {
-	padding: 10px 0 180px 0;
+	padding: 10px 0 100px 0;
 	position: relative;
 }
 .preview_logo{
@@ -97,7 +97,7 @@ a
 .preview_small{
 	position: absolute;
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 }
 .preview_small img{
 	margin-bottom: 10px;
@@ -138,6 +138,36 @@ a
 .red{
 	background: #DC143C;
 }
+.bake{
+	max-width: 100%;
+	background: #293036;
+	padding: 20px;
+	margin: 30px 0px 30px 0px;
+}
+.bake_subtitle{
+	color: #FF4500;
+	font-size: 40px;
+}
+.bake__text{
+	display: block;
+	color: #fff;
+	font-size: 25px;
+	padding-top: 20px;
+	font-weight: bold;
+}
+.cheifsize{
+	padding: 30px;
+}
+.cheifsize__setting-right{
+	
+}
+.cheifsize__setting{
+	display: flex;
+}
+.cheifsize_img img{
+	width: 550px;
+	height: 350px;
+}
 .tabheader_char{
 	display: flex;
 	justify-content: center;
@@ -172,16 +202,15 @@ a
 	height: 400px;
 	justify-content: space-around;
 	left: 25px;
-	position: fixed;
-	top: 100px;
+	position: absolute;
+	top: 550px;
 	width: 25px;
-    z-index: 1000;
 }
 .sidepanel__text
 {
-	font-size: 14px;
-	height: 120px;
-	width: 120px;
+	font-size: 20px;
+	height: 150px;
+	width: 150px;
 }
 .sidepanel__text span
 {

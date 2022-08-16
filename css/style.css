@@ -73,13 +73,14 @@ a
 	margin-bottom: 10px;
 	max-width: 100px;
 	height: 100px;
-	background: rgb(192, 192, 192, .2);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	cursor: pointer;
 }
 .preview__wrapper{
 	display: flex;
 }
 .preview_small-img-active{
-	border: 3px solid #808080;
+	border: 3px solid #54ed39;
 }
 .preview__color{
 	display: flex;
@@ -90,23 +91,14 @@ a
     margin-left: 150px;
 }
 .preview__color-border{
-	width: 30px; 
-    height: 30px;
+	width: 50px; 
+    height: 50px;
     border-radius: 50%;
 	margin-right: 5px;
 	cursor: pointer;
 }
 .preview__color-border-active{
 	border: 3px solid #808080;
-}
-.brown{
-	background: #800000;
-}
-.yellow{
-	background: #FFD700;
-}
-.red{
-	background: #DC143C;
 }
 .bake{
 	max-width: 100%;

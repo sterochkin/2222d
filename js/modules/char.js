@@ -97,7 +97,7 @@ preview.forEach(border => {
     if (button.classList.contains("tabheader_char-item-active") && border.classList.contains("preview_small-img")){
     if(border.classList.contains("fotosmall1")){     
       document.querySelector(".preview_img").src = '/img/cheif/1.png'
-  } else if(border.classList.contains("forosmall2")){
+  } else if(border.classList.contains("fotosmall2")){
       document.querySelector(".preview_img").src = '/img/cheif/2.png'
   }else{
       document.querySelector(".preview_img").src = '/img/cheif/3.png'

@@ -11,8 +11,8 @@ const circle = document.querySelectorAll(".preview__color-border")
 let buttons = document.querySelectorAll(".tabheader_char-item")
 const buttoncheif = document.querySelectorAll(".cheifsize__button-style")
 const buttongusto = document.querySelectorAll(".gustosize__button-style")
-const cheif = ['11кг','111x111(мм)', '111x111(мм)', '20 мин', '2 кг/ч', '1500р']
-const gusto = ["64кг", "600x400(мм)", "185x470(мм)", "20 мин", "2 кг/ч", '1810р']
+const cheif = ['11кг','111x111(мм)', '111x111(мм)', '20 мин', '2 кг/ч']
+const gusto = ["64кг", "600x400(мм)", "185x470(мм)", "20 мин", "2 кг/ч"]
 
 buttoncheif.forEach(cheif => {
   cheif.addEventListener('click', () => {

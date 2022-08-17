@@ -48,10 +48,75 @@ buttongusto.forEach(gusto => {
   });
 })
 
+
+
 circle.forEach(color => {
   color.addEventListener('click', () => {
     circle.forEach((color) => color.classList.remove('preview__color-border-active'));
     color.classList.add('preview__color-border-active');
+    if(document.querySelector(".tabheader_char-item-active").classList.contains('cheif'))
+    {
+      if(document.querySelector(".preview_small-img-active").classList.contains('foto1')){
+
+      if(color.classList.contains('red')){
+      document.querySelector(".preview_img").src = '/img/cheif/cheifred.png'
+    } else if(color.classList.contains('green')){
+      document.querySelector(".preview_img").src = '/img/cheif/cheifgreen.png'
+    } else{
+      document.querySelector(".preview_img").src = '/img/cheif/1.png'
+    }
+  } 
+    else if (document.querySelector(".preview_small-img-active").classList.contains('foto2')){
+    if(color.classList.contains('red')){
+      document.querySelector(".preview_img").src = '/img/cheif/cheifred2.png'
+    } else if(color.classList.contains('green')){
+      document.querySelector(".preview_img").src = '/img/cheif/cheifgreen2.png'
+    } else{
+      document.querySelector(".preview_img").src = '/img/cheif/2.png'
+    }  
+  }
+    else if(document.querySelector(".preview_small-img-active").classList.contains('foto3')){
+    if(color.classList.contains('red')){
+        document.querySelector(".preview_img").src = '/img/cheif/cheifred3.png'
+      } else if(color.classList.contains('green')){
+        document.querySelector(".preview_img").src = '/img/cheif/cheifgreen3.png'
+      } else{
+        document.querySelector(".preview_img").src = '/img/cheif/3.png'
+      }  
+    }
+  } 
+    else if(document.querySelector(".tabheader_char-item-active").classList.contains('gusto'))
+    {
+      if(document.querySelector(".preview_small-img-active").classList.contains('foto1')){
+
+      if(color.classList.contains('red')){
+      document.querySelector(".preview_img").src = '/img/gusto/gustored.png'
+    } else if(color.classList.contains('green')){
+      document.querySelector(".preview_img").src = '/img/gusto/gustogreen.png'
+    } else{
+      document.querySelector(".preview_img").src = '/img/gusto/1.png'
+    }
+  } 
+    else if (document.querySelector(".preview_small-img-active").classList.contains('foto2')){
+    if(color.classList.contains('red')){
+        document.querySelector(".preview_img").src = '/img/gusto/gustored2.png'
+      } else if(color.classList.contains('green')){
+        document.querySelector(".preview_img").src = '/img/gusto/gustogreen2.png'
+      } else{
+        document.querySelector(".preview_img").src = '/img/gusto/2.png'
+      }  
+    }
+  else {
+    (document.querySelector(".preview_small-img-active").classList.contains('foto3'))
+    if(color.classList.contains('red')){
+        document.querySelector(".preview_img").src = '/img/gusto/gustored3.png'
+      } else if(color.classList.contains('green')){
+        document.querySelector(".preview_img").src = '/img/gusto/gustogreen3.png'
+      } else{
+        document.querySelector(".preview_img").src = '/img/gusto/3.png'
+      }  
+    }
+  } 
   });
 })
 
@@ -68,7 +133,7 @@ for (var button of buttons) {
 
  
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = gusto[i])
-      document.querySelector(".preview_img").src = '/img/Gusto.png';
+      document.querySelector(".preview_img").src = '/img/gusto/1.png';
       document.querySelector(".fotosmall1").src = '/img/gusto/small1.png'
       document.querySelector(".fotosmall2").src = '/img/gusto/small2.png'
       document.querySelector(".fotosmall3").src = '/img/gusto/small3.png'
@@ -81,7 +146,7 @@ for (var button of buttons) {
       cheifprice.appendChild(div);
 
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = cheif[i])
-      document.querySelector(".preview_img").src = '/img/Cheif.png';
+      document.querySelector(".preview_img").src = '/img/cheif/1.png';
       document.querySelector(".fotosmall1").src = '/img/cheif/small1.png'
       document.querySelector(".fotosmall2").src = '/img/cheif/small2.png'
       document.querySelector(".fotosmall3").src = '/img/cheif/small3.png'
@@ -97,6 +162,7 @@ preview.forEach(border => {
     if (button.classList.contains("tabheader_char-item-active") && border.classList.contains("preview_small-img")){
     if(border.classList.contains("fotosmall1")){     
       document.querySelector(".preview_img").src = '/img/cheif/1.png'
+
   } else if(border.classList.contains("fotosmall2")){
       document.querySelector(".preview_img").src = '/img/cheif/2.png'
   }else{
@@ -107,6 +173,7 @@ preview.forEach(border => {
     if(border.classList.contains("fotosmall1")){
       document.querySelector(".preview_img").src = '/img/gusto/1.png'
   } else if(border.classList.contains("foto2")){
+     
     document.querySelector(".preview_img").src = '/img/gusto/2.png'
   }else{
     document.querySelector(".preview_img").src = '/img/gusto/3.png'

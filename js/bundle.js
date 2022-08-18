@@ -1592,10 +1592,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/calc */ "./js/modules/calc.js");
 /* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_calc__WEBPACK_IMPORTED_MODULE_1__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './modules/slider'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
+/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
-
 
 
 
@@ -1605,17 +1603,7 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 window.addEventListener('DOMContentLoaded', () => {
 
     // calc()
-    (0,_modules_char__WEBPACK_IMPORTED_MODULE_3__["default"])()
-    // slider({
-    //     container: '.offer__slider',
-    //     slide: '.offer__slide',
-    //     nextArrow: '.offer__slider-next',
-    //     prevArrow: '.offer__slider-prev',
-    //     totalCounter: '#total',
-    //     currentCounter: '#current',
-    //     wrapper: '.offer__slider-wrapper',
-    //     field: '.offer__slider-inner'
-    // })
+    (0,_modules_char__WEBPACK_IMPORTED_MODULE_2__["default"])()
 
 })  
 

@@ -25,6 +25,13 @@ a
 	margin: 0 auto;
 	width: 330px;
 }
+.dividerbake{
+	background-color: rgba(0,0,0,.5);
+	height: 3px;
+	width: 750px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
 .title
 {
 	font-size: 36px;
@@ -35,6 +42,7 @@ a
     display: block;
     text-align: center;
     font-size: 30px;
+	color: #fff;
 	margin-top: 10px;
 }
 .header__left-block
@@ -102,7 +110,6 @@ a
 }
 .bake{
 	max-width: 100%;
-	background: #293036;
 	padding: 20px;
 	margin: 30px 0px 30px 0px;
 }
@@ -112,7 +119,7 @@ a
 }
 .bake__text{
 	display: block;
-	color: #fff;
+	color: #717579;
 	font-size: 25px;
 	padding-top: 20px;
 	font-weight: bold;
@@ -226,6 +233,19 @@ a
 	display: flex;
 	align-content: center;
 	justify-content: center;
+	margin-top: 50px;
+}
+.cheifsize__stok{
+	margin-top: 50px;
+	font-size: 25px;
+	color: #f07c29;
+	height: 60px;
+	box-shadow: 14px 0 14px 14px rgba(0,0,0,.2);
+	text-align: left;
+}
+.cheifsize__stok h2{
+	margin-left: 350px;
+	display: flex;
 }
 .cheifsize_img img{
 	max-width: 600px;
@@ -242,21 +262,21 @@ a
 }
 .delivery{
 	width: 100%;
-	background: #293036;
+	box-shadow: 14px 0 14px 14px rgba(0,0,0,.2);
 }
 .delivery__setting{
 	display: flex;
     justify-content: center;
 }
 .delivery__city{
-	color: #fff;
+	color: #f07c2b;
 	margin-left: 50px;
-	font-size: 20px;
+	font-size: 25px;
 	margin-top: 35px;
 }
 
 .delivery__city span{
-	color: #ffaf61;
+	color: #000;
 }
 .delivery__city-input{
 	display: flex;
@@ -343,7 +363,6 @@ max-height: 250px;
 	justify-content: space-around;
 	left: 25px;
 	position: absolute;
-	top: 550px;
 	width: 25px;
 }
 .sidepanel__text

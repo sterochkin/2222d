@@ -102,11 +102,12 @@ a
 	width: 50px; 
     height: 50px;
     border-radius: 50%;
-	margin-right: 5px;
+	margin-right: 10px;
 	cursor: pointer;
 }
-.preview__color-border-active{
-	border: 3px solid #808080;
+.preview__color-border-active img{
+	border: 3px solid #54ed39;
+	border-radius: 50%;
 }
 .bake{
 	max-width: 100%;

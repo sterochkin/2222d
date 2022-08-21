@@ -47,9 +47,35 @@ buttongusto.forEach(gusto => {
     }
   });
 })
-
-
-
+buttons.forEach(price => {
+  price.addEventListener('click', () => {
+if(document.querySelector(".tabheader_char-item").classList.contains('cheif')){
+  li.innerHTML = 'Печь ALHA CHIEF';
+  cheifname.appendChild(li);
+  div.innerHTML = '1390 руб.';
+  cheifprice.appendChild(div);
+} else {
+  li.innerHTML = 'Печь ALHA GUSTO';
+  cheifname.appendChild(li);
+  div.innerHTML = '1810 руб.';
+  cheifprice.appendChild(div);
+}
+})
+})
+buttons.forEach(none => {
+  none.addEventListener('click', () => {
+if(none.classList.contains('cheif')){
+  document.querySelector(".gustosize__setting").classList.add("gustosize_display-none");
+  document.querySelector(".cheifsize__setting").classList.remove("cheifsize_display-none");
+}else if(none.classList.contains('gusto')){
+  document.querySelector(".cheifsize__setting").classList.add("cheifsize_display-none");
+  document.querySelector(".gustosize__setting").classList.remove("gustosize_display-none");
+}else {
+  document.querySelector(".cheifsize__setting").classList.remove("cheifsize_display-none");
+  document.querySelector(".gustosize__setting").classList.remove("gustosize_display-none");
+}
+})
+})
 circle.forEach(color => {
   color.addEventListener('click', () => {
     circle.forEach((color) => color.classList.remove('preview__color-border-active'));
@@ -126,12 +152,7 @@ for (var button of buttons) {
      );
      if(this.classList.contains("gusto"))
      { 
-      li.innerHTML = 'Печь ALHA GUSTO';
-      gustoname.appendChild(li);
-      div.innerHTML = '1810 руб.';
-      gustoprice.appendChild(div);
 
- 
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = gusto[i])
       document.querySelector(".preview_img").src = '/img/gusto/1.png';
       document.querySelector(".fotosmall1").src = '/img/gusto/small1.png'
@@ -139,12 +160,6 @@ for (var button of buttons) {
       document.querySelector(".fotosmall3").src = '/img/gusto/small3.png'
      }
      else{
-
-      li.innerHTML = 'Печь ALHA CHEIF';
-      cheifname.appendChild(li);
-      div.innerHTML = '1390 руб.';
-      cheifprice.appendChild(div);
-
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = cheif[i])
       document.querySelector(".preview_img").src = '/img/cheif/1.png';
       document.querySelector(".fotosmall1").src = '/img/cheif/small1.png'

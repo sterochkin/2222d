@@ -167,6 +167,7 @@ a
 .gustosize__setting-left{
 	max-width: 500px;
 	text-align: center;
+	margin-top: 50px;
 }
 .gustosize__setting-left h2{
 	font-size: 40px;
@@ -243,6 +244,24 @@ a
 	height: 60px;
 	box-shadow: 14px 0 14px 14px rgba(0,0,0,.2);
 	text-align: left;
+}
+.gustosize_display-none{
+	display: none;
+}
+.cheifsize_display-none{
+	display: none;
+}
+.gustosize__stok{
+	margin-top: 50px;
+	font-size: 25px;
+	color: #f07c29;
+	height: 60px;
+	box-shadow: 14px 0 14px 14px rgba(0,0,0,.2);
+	text-align: left;	
+}
+.gustosize__stok h2{
+	margin-left: 350px;
+	display: flex;
 }
 .cheifsize__stok h2{
 	margin-left: 350px;

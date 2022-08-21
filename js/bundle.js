@@ -115,6 +115,8 @@ var gustoname = document.querySelector('.gustoname');
 var gustoprice = document.querySelector('.gustoprice');
 var div = document.createElement('div');
 var li = document.createElement('li');
+var cheifdop_name = document.querySelector('.cheifdop_name');
+var cheifdop_price = document.querySelector('.cheifdop_price');
 var cheifname = document.querySelector('.cheifname');
 var cheifprice = document.querySelector('.cheifprice');
 const preview = document.querySelectorAll(".preview_small-img")
@@ -141,6 +143,28 @@ buttoncheif.forEach(cheif => {
     }
   });
 })
+
+// buttoncheif.forEach(cheifdop => {
+//   cheifdop.addEventListener('click', () => {
+//     if(cheifdop.classList.contains('litecheif')){
+//       li.innerHTML = 'Стойка ALHA LITE для CHIEF';
+//       cheifdop_name.append(li);
+//       div.innerHTML = '610 руб.';
+//       cheifdop_price.append(div);
+//     }else if(cheifdop.classList.contains('averagecheif')){
+//       li.innerHTML = 'Стойка ALHA AVERAGE для CHIEF';
+//       cheifdop_name.append(li);
+//       div.innerHTML = '820 руб.';
+//       cheifdop_price.append(div);
+//     }else if(cheifdop.classList.contains('procheif')){
+//       li.innerHTML = 'Стойка ALHA PRO для CHIEF';
+//       cheifdop_name.append(li);
+//       div.innerHTML = '310 руб.';
+//       cheifdop_price.append(div);
+//     }
+//   })
+// })
+
 buttongusto.forEach(gusto => {
   gusto.addEventListener('click', () => {
     buttongusto.forEach((gusto) => gusto.classList.remove('gustosize__button-style-active'));
@@ -158,35 +182,35 @@ buttongusto.forEach(gusto => {
     }
   });
 })
-buttons.forEach(price => {
-  price.addEventListener('click', () => {
-if(document.querySelector(".tabheader_char-item").classList.contains('cheif')){
-  li.innerHTML = 'Печь ALHA CHIEF';
-  cheifname.appendChild(li);
-  div.innerHTML = '1390 руб.';
-  cheifprice.appendChild(div);
-} else {
-  li.innerHTML = 'Печь ALHA GUSTO';
-  cheifname.appendChild(li);
-  div.innerHTML = '1810 руб.';
-  cheifprice.appendChild(div);
-}
-})
-})
-buttons.forEach(none => {
-  none.addEventListener('click', () => {
-if(none.classList.contains('cheif')){
-  document.querySelector(".gustosize__setting").classList.add("gustosize_display-none");
-  document.querySelector(".cheifsize__setting").classList.remove("cheifsize_display-none");
-}else if(none.classList.contains('gusto')){
-  document.querySelector(".cheifsize__setting").classList.add("cheifsize_display-none");
-  document.querySelector(".gustosize__setting").classList.remove("gustosize_display-none");
-}else {
-  document.querySelector(".cheifsize__setting").classList.remove("cheifsize_display-none");
-  document.querySelector(".gustosize__setting").classList.remove("gustosize_display-none");
-}
-})
-})
+// buttons.forEach(price => {
+//   price.addEventListener('click', () => {
+// if(price.classList.contains('cheif')){
+//   li.innerHTML = 'Печь ALHA CHIEF';
+//   cheifname.appendChild(li);
+//   div.innerHTML = '1390 руб.';
+//   cheifprice.appendChild(div);
+// } else if(price.classList.contains('gusto')){
+//   li.innerHTML = 'Печь ALHA GUSTO';
+//   cheifname.appendChild(li);
+//   div.innerHTML = '1810 руб.';
+//   cheifprice.appendChild(div);
+// }
+// })
+// })
+// buttons.forEach(none => {
+//   none.addEventListener('click', () => {
+// if(none.classList.contains('cheif')){
+//   document.querySelector(".gustosize__setting").classList.add("gustosize_display-none");
+//   document.querySelector(".cheifsize__setting").classList.remove("cheifsize_display-none");
+// }else if(none.classList.contains('gusto')){
+//   document.querySelector(".cheifsize__setting").classList.add("cheifsize_display-none");
+//   document.querySelector(".gustosize__setting").classList.remove("gustosize_display-none");
+// }else {
+//   document.querySelector(".cheifsize__setting").classList.remove("cheifsize_display-none");
+//   document.querySelector(".gustosize__setting").classList.remove("gustosize_display-none");
+// }
+// })
+// })
 circle.forEach(color => {
   color.addEventListener('click', () => {
     circle.forEach((color) => color.classList.remove('preview__color-border-active'));

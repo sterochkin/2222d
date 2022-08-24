@@ -5,101 +5,96 @@
 /*!****************************!*\
   !*** ./js/modules/calc.js ***!
   \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function calc(){
-const buttons = document.querySelectorAll('.calculating__choose-item'),
-      city_container = document.querySelector('.city_container'),
-      price_out = document.querySelector('.price_out'),
-      shipping_cost_out = document.querySelector('.shipping-cost_out'),
-      price_out_all = document.querySelector('.price_out_all');
+// function calc(){
+// const buttons = document.querySelectorAll('.calculating__choose-item'),
+//       city_container = document.querySelector('.city_container'),
+//       price_out = document.querySelector('.price_out'),
+//       shipping_cost_out = document.querySelector('.shipping-cost_out'),
+//       price_out_all = document.querySelector('.price_out_all');
 
-const prices = [
-20, 30, 25, 90, 55
-];
+// const prices = [
+// 20, 30, 25, 90, 55
+// ];
 
- const city_list = 
- [
-   {name: "Не выбрано", shipping_cost: 0},
-   {name: "Витебск", shipping_cost: 100},
-   {name: "Минск", shipping_cost: 200},
-   {name: "Гродно", shipping_cost: 300}
- ];
+//  const city_list = 
+//  [
+//    {name: "Не выбрано", shipping_cost: 0},
+//    {name: "Витебск", shipping_cost: 100},
+//    {name: "Минск", shipping_cost: 200},
+//    {name: "Гродно", shipping_cost: 300}
+//  ];
 
-let current_price = 0;
-let shipping_cost = 0;
+// let current_price = 0;
+// let shipping_cost = 0;
 
 
-function CreateDeliveryCities() {
+// function CreateDeliveryCities() {
 
-const fragment = document.createDocumentFragment();
+// const fragment = document.createDocumentFragment();
 
-city_list.map((elem) => {
-const option_node = document.createElement('option');
+// city_list.map((elem) => {
+// const option_node = document.createElement('option');
 
-option_node.className = 'city_container';
-option_node.textContent = `${elem.name}`;
+// option_node.className = 'city_container';
+// option_node.textContent = `${elem.name}`;
 
-fragment.append(option_node);
-})
+// fragment.append(option_node);
+// })
 
-city_container.append(fragment);
+// city_container.append(fragment);
 
-city_container.addEventListener('change', function() {
+// city_container.addEventListener('change', function() {
 
-shipping_cost = city_list[city_container.selectedIndex].shipping_cost;
-ShowPrices();
-})
+// shipping_cost = city_list[city_container.selectedIndex].shipping_cost;
+// ShowPrices();
+// })
 
-shipping_cost = prices[0].shipping_cost;
-ShowPrices();
-}
+// shipping_cost = prices[0].shipping_cost;
+// ShowPrices();
+// }
 
-function CreateButtonsHandler() {
+// function CreateButtonsHandler() {
 
-for (let i = 0; i < buttons.length; i++) {
+// for (let i = 0; i < buttons.length; i++) {
 
-buttons[i].addEventListener('click', function() {
+// buttons[i].addEventListener('click', function() {
 
-if (this.classList.contains('calculating__choose-item_active')) {
+// if (this.classList.contains('calculating__choose-item_active')) {
 
-  this.classList.remove('calculating__choose-item_active');
-  current_price -= prices[i];
-}
-else {
+//   this.classList.remove('calculating__choose-item_active');
+//   current_price -= prices[i];
+// }
+// else {
 
-  this.classList.add('calculating__choose-item_active');
-  current_price += prices[i];
-}
+//   this.classList.add('calculating__choose-item_active');
+//   current_price += prices[i];
+// }
 
-ShowPrices();
-});
-}
-}
+// ShowPrices();
+// });
+// }
+// }
 
-function ShowPrices()
-{
-if(shipping_cost >= 0) {
-price_out.textContent = `${current_price}`;
-shipping_cost_out.textContent = `${shipping_cost}`;
-price_out_all.textContent = `${current_price + shipping_cost}`;
-} 
-else {
-price_out.textContent = `${current_price}`;
-shipping_cost_out.textContent = '0';
-price_out_all.textContent = `${current_price}`;
-}
-}
+// function ShowPrices()
+// {
+// if(shipping_cost >= 0) {
+// price_out.textContent = `${current_price}`;
+// shipping_cost_out.textContent = `${shipping_cost}`;
+// price_out_all.textContent = `${current_price + shipping_cost}`;
+// } 
+// else {
+// price_out.textContent = `${current_price}`;
+// shipping_cost_out.textContent = '0';
+// price_out_all.textContent = `${current_price}`;
+// }
+// }
 
-CreateButtonsHandler();
-CreateDeliveryCities();
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (calc);
+// CreateButtonsHandler();
+// CreateDeliveryCities();
+// }
+// export default calc;
 
 /***/ }),
 
@@ -116,198 +111,230 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function char(){
 
-const buttons = document.querySelectorAll(".tabheader_char-item");
+var gustoname = document.querySelector('.gustoname');
+var gustoprice = document.querySelector('.gustoprice');
+var div = document.createElement('div');
+var li = document.createElement('li');
+var cheifdop_name = document.querySelector('.cheifdop_name');
+var cheifdop_price = document.querySelector('.cheifdop_price');
+var cheifname = document.querySelector('.cheifname');
+var cheifprice = document.querySelector('.cheifprice');
+const preview = document.querySelectorAll(".preview_small-img")
+const circle = document.querySelectorAll(".preview__color-border")
+let buttons = document.querySelectorAll(".tabheader_char-item")
+const buttoncheif = document.querySelectorAll(".cheifsize__button-style")
+const buttongusto = document.querySelectorAll(".gustosize__button-style")
 const cheif = ['11кг','111x111(мм)', '111x111(мм)', '20 мин', '2 кг/ч']
 const gusto = ["64кг", "600x400(мм)", "185x470(мм)", "20 мин", "2 кг/ч"]
 
-for (const button of buttons) {
+buttoncheif.forEach(cheif => {
+  cheif.addEventListener('click', () => {
+    buttoncheif.forEach((cheif) => cheif.classList.remove('cheifsize__button-style-active'));
+    cheif.classList.add('cheifsize__button-style-active');
+    if(cheif.classList.contains("litecheif")){
+      document.querySelector(".cheifliteimg1").src = '/img/cheif/CHEIFLITE.png'
+      document.querySelector(".cheifliteimg2").src = '/img/cheif/CHEIFLITE2.png'
+    } else if(cheif.classList.contains("averagecheif")){
+      document.querySelector(".cheifliteimg1").src = '/img/cheif/CHEIFAVERAGE.png'
+      document.querySelector(".cheifliteimg2").src = '/img/cheif/CHEIFAVERAGE2.png'
+    }else {
+      document.querySelector(".cheifliteimg1").src = '/img/cheif/CHEIFPRO.png'
+      document.querySelector(".cheifliteimg2").src = '/img/cheif/CHEIFPRO2.png'
+    }
+  });
+})
+
+// buttoncheif.forEach(cheifdop => {
+//   cheifdop.addEventListener('click', () => {
+//     if(cheifdop.classList.contains('litecheif')){
+//       li.innerHTML = 'Стойка ALHA LITE для CHIEF';
+//       cheifdop_name.append(li);
+//       div.innerHTML = '610 руб.';
+//       cheifdop_price.append(div);
+//     }else if(cheifdop.classList.contains('averagecheif')){
+//       li.innerHTML = 'Стойка ALHA AVERAGE для CHIEF';
+//       cheifdop_name.append(li);
+//       div.innerHTML = '820 руб.';
+//       cheifdop_price.append(div);
+//     }else if(cheifdop.classList.contains('procheif')){
+//       li.innerHTML = 'Стойка ALHA PRO для CHIEF';
+//       cheifdop_name.append(li);
+//       div.innerHTML = '310 руб.';
+//       cheifdop_price.append(div);
+//     }
+//   })
+// })
+
+buttongusto.forEach(gusto => {
+  gusto.addEventListener('click', () => {
+    buttongusto.forEach((gusto) => gusto.classList.remove('gustosize__button-style-active'));
+    gusto.classList.add('gustosize__button-style-active');
+
+    if(gusto.classList.contains("litegusto")){
+      document.querySelector(".gustoliteimg1").src = '/img/gusto/GUSTOLITE.png'
+      document.querySelector(".gustoliteimg2").src = '/img/gusto/GUSTOLITE2.png'
+    } else if(gusto.classList.contains("averagegusto")){
+      document.querySelector(".gustoliteimg1").src = '/img/gusto/GUSTOAVERAGE.png'
+      document.querySelector(".gustoliteimg2").src = '/img/gusto/GUSTOAVERAGE2.png'
+    }else {
+      document.querySelector(".gustoliteimg1").src = '/img/gusto/GUSTOPRO.png'
+      document.querySelector(".gustoliteimg2").src = '/img/gusto/GUSTOPRO2.png'
+    }
+  });
+})
+// buttons.forEach(price => {
+//   price.addEventListener('click', () => {
+// if(price.classList.contains('cheif')){
+//   li.innerHTML = 'Печь ALHA CHIEF';
+//   cheifname.appendChild(li);
+//   div.innerHTML = '1390 руб.';
+//   cheifprice.appendChild(div);
+// } else if(price.classList.contains('gusto')){
+//   li.innerHTML = 'Печь ALHA GUSTO';
+//   cheifname.appendChild(li);
+//   div.innerHTML = '1810 руб.';
+//   cheifprice.appendChild(div);
+// }
+// })
+// })
+// buttons.forEach(none => {
+//   none.addEventListener('click', () => {
+// if(none.classList.contains('cheif')){
+//   document.querySelector(".gustosize__setting").classList.add("gustosize_display-none");
+//   document.querySelector(".cheifsize__setting").classList.remove("cheifsize_display-none");
+// }else if(none.classList.contains('gusto')){
+//   document.querySelector(".cheifsize__setting").classList.add("cheifsize_display-none");
+//   document.querySelector(".gustosize__setting").classList.remove("gustosize_display-none");
+// }else {
+//   document.querySelector(".cheifsize__setting").classList.remove("cheifsize_display-none");
+//   document.querySelector(".gustosize__setting").classList.remove("gustosize_display-none");
+// }
+// })
+// })
+circle.forEach(color => {
+  color.addEventListener('click', () => {
+    circle.forEach((color) => color.classList.remove('preview__color-border-active'));
+    color.classList.add('preview__color-border-active');
+    if(document.querySelector(".tabheader_char-item-active").classList.contains('cheif'))
+    {
+      if(document.querySelector(".preview_small-img-active").classList.contains('foto1')){
+
+      if(color.classList.contains('red')){
+      document.querySelector(".preview_img").src = '/img/cheif/cheifred.png'
+    } else if(color.classList.contains('green')){
+      document.querySelector(".preview_img").src = '/img/cheif/cheifgreen.png'
+    } else{
+      document.querySelector(".preview_img").src = '/img/cheif/1.png'
+    }
+  } 
+    else if (document.querySelector(".preview_small-img-active").classList.contains('foto2')){
+    if(color.classList.contains('red')){
+      document.querySelector(".preview_img").src = '/img/cheif/cheifred2.png'
+    } else if(color.classList.contains('green')){
+      document.querySelector(".preview_img").src = '/img/cheif/cheifgreen2.png'
+    } else{
+      document.querySelector(".preview_img").src = '/img/cheif/2.png'
+    }  
+  }
+    else if(document.querySelector(".preview_small-img-active").classList.contains('foto3')){
+    if(color.classList.contains('red')){
+        document.querySelector(".preview_img").src = '/img/cheif/cheifred3.png'
+      } else if(color.classList.contains('green')){
+        document.querySelector(".preview_img").src = '/img/cheif/cheifgreen3.png'
+      } else{
+        document.querySelector(".preview_img").src = '/img/cheif/3.png'
+      }  
+    }
+  } 
+    else if(document.querySelector(".tabheader_char-item-active").classList.contains('gusto'))
+    {
+      if(document.querySelector(".preview_small-img-active").classList.contains('foto1')){
+
+      if(color.classList.contains('red')){
+      document.querySelector(".preview_img").src = '/img/gusto/gustored.png'
+    } else if(color.classList.contains('green')){
+      document.querySelector(".preview_img").src = '/img/gusto/gustogreen.png'
+    } else{
+      document.querySelector(".preview_img").src = '/img/gusto/1.png'
+    }
+  } 
+    else if (document.querySelector(".preview_small-img-active").classList.contains('foto2')){
+    if(color.classList.contains('red')){
+        document.querySelector(".preview_img").src = '/img/gusto/gustored2.png'
+      } else if(color.classList.contains('green')){
+        document.querySelector(".preview_img").src = '/img/gusto/gustogreen2.png'
+      } else{
+        document.querySelector(".preview_img").src = '/img/gusto/2.png'
+      }  
+    }
+  else {
+    (document.querySelector(".preview_small-img-active").classList.contains('foto3'))
+    if(color.classList.contains('red')){
+        document.querySelector(".preview_img").src = '/img/gusto/gustored3.png'
+      } else if(color.classList.contains('green')){
+        document.querySelector(".preview_img").src = '/img/gusto/gustogreen3.png'
+      } else{
+        document.querySelector(".preview_img").src = '/img/gusto/3.png'
+      }  
+    }
+  } 
+  });
+})
+
+for (var button of buttons) {
    button.addEventListener('click', function () {
      buttons.forEach(i => i.classList.remove('tabheader_char-item-active')
      );
      if(this.classList.contains("gusto"))
-     {
+     { 
+
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = gusto[i])
-      document.querySelector(".preview_img").src = 'http://placehold.jp/850x570.png';
+      document.querySelector(".preview_img").src = '/img/gusto/1.png';
+      document.querySelector(".fotosmall1").src = '/img/gusto/small1.png'
+      document.querySelector(".fotosmall2").src = '/img/gusto/small2.png'
+      document.querySelector(".fotosmall3").src = '/img/gusto/small3.png'
      }
      else{
       document.querySelectorAll('.info').forEach((n, i) => n.textContent = cheif[i])
-      document.querySelector(".preview_img").src = 'https://andinvest.ru/wp-content/uploads/2021/07/pticy-i-flag-850x570.jpg';
+      document.querySelector(".preview_img").src = '/img/cheif/1.png';
+      document.querySelector(".fotosmall1").src = '/img/cheif/small1.png'
+      document.querySelector(".fotosmall2").src = '/img/cheif/small2.png'
+      document.querySelector(".fotosmall3").src = '/img/cheif/small3.png'
      }
      this.classList.toggle('tabheader_char-item-active');
    });
 };
-}
 
+preview.forEach(border => {
+  border.addEventListener('click', () => {
+    preview.forEach((border) => border.classList.remove('preview_small-img-active'));
+    border.classList.add('preview_small-img-active');
+    if (button.classList.contains("tabheader_char-item-active") && border.classList.contains("preview_small-img")){
+    if(border.classList.contains("fotosmall1")){     
+      document.querySelector(".preview_img").src = '/img/cheif/1.png'
+
+  } else if(border.classList.contains("fotosmall2")){
+      document.querySelector(".preview_img").src = '/img/cheif/2.png'
+  }else{
+      document.querySelector(".preview_img").src = '/img/cheif/3.png'
+  }
+
+} else {
+    if(border.classList.contains("fotosmall1")){
+      document.querySelector(".preview_img").src = '/img/gusto/1.png'
+  } else if(border.classList.contains("foto2")){
+     
+    document.querySelector(".preview_img").src = '/img/gusto/2.png'
+  }else{
+    document.querySelector(".preview_img").src = '/img/gusto/3.png'
+  }
+
+}
+});
+})
+}
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (char);
-
-/***/ }),
-
-/***/ "./js/modules/slider.js":
-/*!******************************!*\
-  !*** ./js/modules/slider.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCounter, wrapper, field}) {
-    // Slider
-
-    let offset = 0;
-    let slideIndex = 1;
-
-    const slides = document.querySelectorAll(slide),
-        slider = document.querySelector(container),
-        prev = document.querySelector(prevArrow),
-        next = document.querySelector(nextArrow),
-        total = document.querySelector(totalCounter),
-        current = document.querySelector(currentCounter),
-        slidesWrapper = document.querySelector(wrapper),
-        width = window.getComputedStyle(slidesWrapper).width,
-        slidesField = document.querySelector(field);
-
-    if (slides.length < 10) {
-        total.textContent = `0${slides.length}`;
-        current.textContent =  `0${slideIndex}`;
-    } else {
-        total.textContent = slides.length;
-        current.textContent =  slideIndex;
-    }
-    
-    slidesField.style.width = 100 * slides.length + '%';
-    slidesField.style.display = 'flex';
-    slidesField.style.transition = '0.5s all';
-
-    slidesWrapper.style.overflow = 'hidden';
-
-    slides.forEach(slide => {
-        slide.style.width = width;
-    });
-
-    slider.style.position = 'relative';
-
-    const indicators = document.createElement('ol'),
-          dots = [];
-    indicators.classList.add('carousel-indicators');
-    indicators.style.cssText = `
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 15;
-        display: flex;
-        justify-content: center;
-        margin-right: 15%;
-        margin-left: 15%;
-        list-style: none;
-    `; // Если хотите - добавьте в стили, но иногда у нас нет доступа к стилям
-    slider.append(indicators);
-
-    for (let i = 0; i < slides.length; i++) {
-        const dot = document.createElement('li');
-        dot.setAttribute('data-slide-to', i + 1);
-        dot.style.cssText = `
-            box-sizing: content-box;
-            flex: 0 1 auto;
-            width: 30px;
-            height: 6px;
-            margin-right: 3px;
-            margin-left: 3px;
-            cursor: pointer;
-            background-color: #fff;
-            background-clip: padding-box;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            opacity: .5;
-            transition: opacity .6s ease;
-        `;
-        if (i == 0) {
-            dot.style.opacity = 1;
-        }
-        indicators.append(dot);
-        dots.push(dot);
-    }
-
-    next.addEventListener('click', () => {
-        if (offset == (deleteNotDigits(width) * (slides.length - 1))) {
-            offset = 0;
-        } else {
-            offset += deleteNotDigits(width); 
-        }
-
-        slidesField.style.transform = `translateX(-${offset}px)`;
-
-        if (slideIndex == slides.length) {
-            slideIndex = 1;
-        } else {
-            slideIndex++;
-        }
-
-        if (slides.length < 10) {
-            current.textContent =  `0${slideIndex}`;
-        } else {
-            current.textContent =  slideIndex;
-        }
-
-        dots.forEach(dot => dot.style.opacity = ".5");
-        dots[slideIndex-1].style.opacity = 1;
-    });
-
-    prev.addEventListener('click', () => {
-        if (offset == 0) {
-            offset = deleteNotDigits(width) * (slides.length - 1);
-        } else {
-            offset -= deleteNotDigits(width);
-        }
-
-        slidesField.style.transform = `translateX(-${offset}px)`;
-
-        if (slideIndex == 1) {
-            slideIndex = slides.length;
-        } else {
-            slideIndex--;
-        }
-
-        if (slides.length < 10) {
-            current.textContent =  `0${slideIndex}`;
-        } else {
-            current.textContent =  slideIndex;
-        }
-
-        dots.forEach(dot => dot.style.opacity = ".5");
-        dots[slideIndex-1].style.opacity = 1;
-    });
-
-    dots.forEach(dot => {
-        dot.addEventListener('click', (e) => {
-            const slideTo = e.target.getAttribute('data-slide-to');
-
-            slideIndex = slideTo;
-            offset = deleteNotDigits(width) * (slideTo - 1);
-
-            slidesField.style.transform = `translateX(-${offset}px)`;
-
-            if (slides.length < 10) {
-                current.textContent =  `0${slideIndex}`;
-            } else {
-                current.textContent =  slideIndex;
-            }
-
-            dots.forEach(dot => dot.style.opacity = ".5");
-            dots[slideIndex-1].style.opacity = 1;
-        });
-    });
-
-    function deleteNotDigits(str) {
-        return +str.replace(/\D/g, '');
-    }
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);
 
 /***/ }),
 
@@ -1603,10 +1630,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nodelist-foreach-polyfill */ "./node_modules/nodelist-foreach-polyfill/index.js");
 /* harmony import */ var nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/calc */ "./js/modules/calc.js");
-/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
-/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
+/* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_calc__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
-
 
 
 
@@ -1615,18 +1641,8 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    (0,_modules_calc__WEBPACK_IMPORTED_MODULE_1__["default"])()
-    ;(0,_modules_char__WEBPACK_IMPORTED_MODULE_3__["default"])()
-    ;(0,_modules_slider__WEBPACK_IMPORTED_MODULE_2__["default"])({
-        container: '.offer__slider',
-        slide: '.offer__slide',
-        nextArrow: '.offer__slider-next',
-        prevArrow: '.offer__slider-prev',
-        totalCounter: '#total',
-        currentCounter: '#current',
-        wrapper: '.offer__slider-wrapper',
-        field: '.offer__slider-inner'
-    })
+    // calc()
+    (0,_modules_char__WEBPACK_IMPORTED_MODULE_2__["default"])()
 
 })  
 

@@ -6,7 +6,9 @@
     <title>ALHA</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="/icons/mini_logo.png" type="image/png">
-    <link rel="stylesheet" href="css/adaptive-slider.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -18,52 +20,66 @@
                 <h2>Традиционные печи для пиццы на дровах</h2>
             </div>
         </div>
+
     </header>
-    <div class="sidepanel">
-        <div class="sidepanel__text"><span>Социальные сети</span></div>
-        <div class="sidepanel__divider"></div>
-        <a href="instagram.com" class="sidepanel__icon">
-            <img src="icons/instagram.svg" alt="instagram">
-        </a>
-    </div>
+
 
     <div class="preview">
-        <div class="bgc_blue"></div>
+        <!-- <div class="preview_logo">
+            <img src="img/preview_logo.png" alt="Лого">
+        </div> -->
+        <div class="bake">
+            <div class="container">
+                <h2 class="bake_subtitle">Любите готовить на огне?</h2>
+            <span class="bake__text">Мы предлагаем вам печи ALHA. Разогрев такой печи занимает 20 минут, а приготовление
+                пиццы всего за 3 минуты. Сочетание современного дизайна с итальянскими традициями, а также
+                компактность и легкость в перевозке делают эти печи универсальными. </span>
+            <span class="bake__text">Доступен индивидуальный подбор цветовых решений печи, а также проект стоек ALHA под
+                ваши размеры зоны барбекю.</span>
+            </div>
+        </div>
+        <div class="dividerbake"></div>
         <div class="container">
+            <div class="sidepanel">
+                <div class="sidepanel__text"><span>Социальные сети</span></div>
+                <div class="sidepanel__divider"></div>
+                <a href="instagram.com" class="sidepanel__icon">
+                    <img src="icons/instagram.svg" alt="instagram">
+                </a>
+            </div>
+            <div class="preview_small">
+                <img class = "preview_small-img fotosmall1 foto1 preview_small-img-active" src="/img/cheif/small1.png" alt="">
+                <img class = "preview_small-img fotosmall2 foto2" src="/img/cheif/small2.png" alt="">
+                <img class = "preview_small-img fotosmall3 foto3" src="/img/cheif/small3.png" alt="">
+            </div>
             <div class="tabcontainer">
                 <div class="tabcontent">
-                    <img class = "preview_img" src="http://placehold.jp/850x570.png" alt="gusto">
-                    <div class="tabcontent__descr">
-                        Дровяная печь  - это способ испечь пиццу, хлеб, жаркое, мясо,
-                        рыбу и овощи, пудинги, в общем, все то, что вы можете сделать в
-                        стандартной духовке, но со всеми очевидными плюсами, которые
-                        может предложить только приготовление пищи на дровах.
-                        Легко перемещается и удобна в использовании.
-                    </div>
+                    <img class = "preview_img" src="img/cheif/1.png" alt="">
                 </div>
                 <div class="tabheader">
                     <div class="tabheader_char">
-                        <div class="tabheader_char-item gusto tabheader_char-item-active ">Gusto</div>
-                        <div class="tabheader_char-item cheif">Cheif</div>
+                        <div class="tabheader_char-item gusto">Gusto</div>
+                        <div class="tabheader_char-item tabheader_char-item-active cheif">Chief</div>
                     </div>
+
                     <div class="tabheader__item">
                         <div class="tabheader__item tabheader__item-h2">Характеристики:</div>
                         <div class="tabheader__item">
                             <div class="tabheader__item_text">
                                 <p>Вес:</p>
-                                <h3 class="info">64кг</h3>
+                                <h3 class="info">11кг</h3>
                             </div>
                         </div>
                         <div class="tabheader__item">
                             <div class="tabheader__item_text">
                                 <p>Поверхность для приготовления:</p>
-                                <h3 class="info">600x400(мм)</h3>
+                                <h3 class="info">111x111(мм)</h3>
                             </div>
                         </div>
                         <div class="tabheader__item">
                             <div class="tabheader__item_text">
                                 <p>Размер устья печи:</p>
-                                <h3 class="info">185x470(мм)</h3>
+                                <h3 class="info">111x111(мм)</h3>
                             </div>   
                         </div>
                         <div class="tabheader__item">
@@ -81,137 +97,122 @@
                     </div>
                 </div>
             </div>
-
-        </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="offer">
-        <div class="container">
-            <div class="offer__advantages">
-                <h2>Дополнительные фукции:</h2>
-                <div class="offer__advantages-text">                                       
-                    <ul>
-                        <li>Столик боковой</li>
-                        <li>Комплект ножек с колесом</li> 
-                        <li>Зона барбекю Lite</li>
-                        <li>Зона барбекю Average</li>
-                        <li>Зона барбекю Pro</li>
-                    </ul>
-
-                </div>
-            </div>
-            <div class="offer__slider">
-                <div class="offer__slider-counter">
-                    <div class="offer__slider-prev">
-                        <img src="icons/left.svg" alt="prev">
-                    </div>
-                    <span id="current">03</span>
-                    /
-                    <span id="total">04</span>
-                    <div class="offer__slider-next">
-                        <img src="icons/right.svg" alt="next">
-                    </div>
-                </div>
-                <div class="offer__slider-wrapper">
-                    <div class="offer__slider-inner">
-                        <div class="offer__slide">
-                            <img src="http://placehold.jp/650x390.png" alt="pepper">
-                        </div>
-                        <div class="offer__slide">
-                            <img src="http://placehold.jp/650x390.png" alt="food">
-                        </div>
-                        <div class="offer__slide">
-                            <img src="http://placehold.jp/650x390.png" alt="oil">
-                        </div>
-                        <div class="offer__slide">
-                            <img src="http://placehold.jp/650x390.png" alt="paprika">
-                        </div>
-                        <div class="offer__slide">
-                            <img src="http://placehold.jp/650x390.png" alt="paprika">
-                        </div>
-                    </div>
-                </div>
+            <div class="preview__color">
+                <div class="preview__color-border preview__color-border-active yellow"><img src="img/border/1.png" alt=""></div>
+                <div class="preview__color-border green"><img src="img/border/2.png" alt=""></div>
+                <div class="preview__color-border red"><img src="img/border/3.png" alt=""></div>
             </div>
         </div>
     </div>
 
     <div class="divider"></div>
 
-    <div class="calculating">
+    </div>
+
+    <div class="cheifsize">
+
+        <div class="container2">
+            <div class="cheifsize__setting">
+                <div class="cheifsize__setting-left">
+            <h2>CHIEF</h2>
+                <div class="cheifsize__button">
+                    <div class="cheifsize__button-style cheifsize__button-style-active litecheif">Lite</div>
+                    <div class="cheifsize__button-style averagecheif">Average</div>
+                    <div class="cheifsize__button-style procheif">Pro</div>
+                </div>
+                <div class="cheifsize__button-price">
+                    <div class="button-prices">540 руб.</div>
+                    <div class="button-prices">780 руб.</div>
+                    <div class="button-prices">330 руб.</div>
+                </div>
+        </div>
+        <div class="cheifsize__setting-right">
+            <div class="cheifsize_img">
+                <img class = "cheifliteimg1" src="img/cheif/CHEIFLITE.png" alt="">
+                <img class = "cheifliteimg2"src="img/cheif/CHEIFLITE2.png" alt="">
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="gustosize">
+        <div class="container2">
+            <div class="gustosize__setting">
+                <div class="gustosize__setting-left">
+            <h2 class="gustosize">GUSTO</h2>
+                <div class="gustosize__button">
+                    <div class="gustosize__button-style litegusto">Lite</div>
+                    <div class="gustosize__button-style gustosize__button-style-active averagegusto">Average</div>
+                    <div class="gustosize__button-style progusto">Pro</div>
+                </div>
+                <div class="gustosize__button-price">
+                    <div class="button-prices">610 руб.</div>
+                    <div class="button-prices">820 руб.</div>
+                    <div class="button-prices">320 руб.</div>
+                </div>
+        </div>
+            <div class="gustosize__setting-right">
+                <div class="gustosize_img">
+                    <img class = "gustoliteimg1" src="img/gusto/GUSTOAVERAGE.png" alt="">
+                    <img class = "gustoliteimg2" src="img/gusto/GUSTOAVERAGE2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="delivery">
         <div class="container">
-          <h2 class="title">Выберите необходимые параметры
-          </h2>
-          <div class="calculating__field">
-            <div class="calculating__subtitle">
-              Типоразмер:
+            <div class="delivery__setting">
+                <div class="delivery__logo">
+                    <img src="img/delivery.png" alt="delivery">
+                </div>
+                <div class="delivery__city">
+                    <h2>Доставим вашу печь в <span>любой</span> город Беларуси.</h2>
+                    <div class="delivery__city-input">
+                    </div>
+                </div>
             </div>
-            <div class="calculating__choose" id="gender">
-              <div class="calculating__choose-item">ALHA CHEIF</div>
-              <div class="calculating__choose-item">ALHA GUSTO</div>
-            </div>
-    
-            <div class="calculating__subtitle">
-              Доп. комплектация:
-            </div>
-            <div class="calculating__choose">
-              <div class="calculating__choose-item">Зона барбекю Lite</div>
-              <div class="calculating__choose-item">Зона барбекю Average</div>
-              <div class="calculating__choose-item">Зона барбекю Pro </div>
-            </div>
-
-            <div class="calculating__subtitle">
-                Выберите город:
-              </div>
-              <div class="calculating__choose">
-                <select class="city_container">
-                </select>
-              </div>
-            
-    
-            <div class="calculating__divider"></div>
-    
-            <div class="calculating__total">
-              <div class="calculating__subtitle none">
-                Стоимость комплектации:
-              </div>
-              <div class="calculating__result none">
-                <span class="price_out">____</span> руб
-              </div>
-              <div class="calculating__subtitle none">
-               Стоимость доставки:
-              </div>
-              <div class="shipping-cost none">
-                <span class="shipping-cost_out">____</span> руб
-              </div>
-              <div class="calculating__subtitle">
-                Стоимость:
-            </div>
-            <div class="calculating__result">
-                <span class="price_out_all">____</span> руб
-            </div>
-            </div>
-
-            
-          </div>
         </div>
-      </div>
+    </div>
 
-    <div class="slperekhodnik">
+    <div class="contact">
+        <div class="container">
+            <div class="contact__wrapper">
+                <div class="contact__text">
+                <div class="contact__text-title">Напишите нам!</div>
+                <div class="contact__text-subtitle"> Если у вас возникли вопросы или вы желаете сделать заказ, заполните форму справа, и наш специалист свяжется с вами в ближайшее время.</div>
+            </div>
+            <form class="obratnuj-zvonok" autocomplete="off" action='email.php' method='post'>
+                <div class="form-zvonok"> 
+                  <div>
+                    <label>Имя <span>*</span></label>
+                    <input type='text' name='username' required></div>
+                  <div>
+                    <label>Номер телефона<span>*</span></label>
+                    <input type='text' name='usernumber' required></div>
+                  <div>
+                    <label>Сообщение</label>
+                    <input type='text' name='question'>
+                  </div>
+                  <input class="bot-send-mail" type='submit' value='Послать заявку'>
+                </div>
+                </form>
 
-        <aside class="gablok_sedakoda">
-        <div class="slayder_karusel">
-        <figure><img src="https://via.placeholder.com/700x400" alt=""><figcaption>Ком1</figcaption></figure>
-        <figure><img src="https://via.placeholder.com/700x400" alt=""><figcaption>Ком2</figcaption></figure>
-        <figure><img src="https://via.placeholder.com/700x400" alt=""><figcaption>Ком3</figcaption></figure>
-        <figure><img src="https://via.placeholder.com/700x400" alt=""><figcaption>Ком4</figcaption></figure>
-        <figure><img src="https://via.placeholder.com/700x400" alt=""><figcaption>Ком5</figcaption></figure>
+            </div>
+            </div>
         </div>
-        </aside>
-           
+    </div>
+    <div class="container">
+        <div class="gallery">
+            <div class="gallery__title">ГАЛЕРЕЯ</div>
+            <div class="gallery__img">
+                <img src="img/gallery/1.png" alt="foto1">
+                <img src="img/gallery/2.png" alt="foto2">
+                <img src="img/gallery/3.png" alt="foto3">
+            </div>
         </div>
-
+    </div>
     <footer class="footer">
         <div class="container">
             <div class="social">

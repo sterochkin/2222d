@@ -221,6 +221,8 @@ preview.forEach(border => {
 }
 });
 })
+
+
 }
 
 export default char;

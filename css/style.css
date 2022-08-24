@@ -613,6 +613,13 @@ max-height: 250px;
 	 font-weight: 600;
 	 color: #f07c2b;
 }
+textarea {
+	border:#717579;
+	background: #edeeed;
+	resize: none;
+	border-radius: 5px;
+	padding: 10px 15px;
+}
 .obratnuj-zvonok{
 	width: 100%;
 	max-width: 350px;
@@ -639,7 +646,7 @@ max-height: 250px;
 .form-zvonok label{
 	margin-bottom: 5px;
 }
-.form-zvonok input{
+.form-zvonok input {
 	border-radius: 5px;
 	border: #717579;
 	background: #edeeed;
@@ -838,3 +845,7 @@ max-height: 250px;
 		/* @media (max-width:320px){
 
 		} */
+.message_sec{
+	padding: 0;
+	margin: 0 auto;
+}

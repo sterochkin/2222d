@@ -183,19 +183,24 @@
                 <div class="contact__text-title">Напишите нам!</div>
                 <div class="contact__text-subtitle"> Если у вас возникли вопросы или вы желаете сделать заказ, заполните форму справа, и наш специалист свяжется с вами в ближайшее время.</div>
             </div>
-            <form class="obratnuj-zvonok" autocomplete="off" action='email.php' method='post'>
+            <form class="obratnuj-zvonok" action="telegram.php" method="POST">
                 <div class="form-zvonok"> 
                 <div>
                     <label>Имя <span>*</span></label>
-                    <input type='text' name='username' required></div>
+                    <input type="text" name="user_name" placeholder="Например, Артем"></div>
                 <div>
                     <label>Номер телефона (с кодом) <span>*</span></label>
-                    <input type='text' name='usernumber' required></div>
+                    <input type="text" name="user_number" placeholder="+375(29) 999 99 99"></div>
                 <div>
                     <label>Сообщение</label>
-                    <input type='text' name='question'>
+                    <textarea class = "user_question" name="user_question" cols="37" rows="5" class="maxWidth" placeholder="Здраствуйте, хотел бы уточнить по стоимости и срокам доставки"></textarea>
+
+                    <!-- <input size="50"  maxlength="50" type='text' name='user_question' placeholder="Здраствуйте, хотел бы уточнить по стоимости и срокам доставки"> -->
                 </div>
                 <input class="bot-send-mail" type='submit' value='Послать заявку'>
+                </div>
+                <div class="message_sec">
+                    <h3>Ваша заявка отправлена! Спасибо!</h3>
                 </div>
                 </form>
             </div>

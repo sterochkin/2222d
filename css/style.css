@@ -848,4 +848,11 @@ textarea {
 .message_sec{
 	padding: 0;
 	margin: 0 auto;
+	font-size: 15px;
+}
+.message_sec h3{
+	margin: 0 auto;
+	width: 280px;
+	color: #f07c2b;
+	display: none;
 }

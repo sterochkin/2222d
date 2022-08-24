@@ -132,6 +132,7 @@ a
 	margin-top: 15px;
 	padding: 25px;
 	background: #fff;
+
 }
 .gustosize__info-text{
 	margin-top: 15px;
@@ -199,9 +200,6 @@ a
 	padding: 25px;
 	background: #fff;
 }
-.cheifsize__button{
-	margin-top: 15px;
-}
 .cheifsize__info-text{
 	margin-top: 15px;
 	font-size: 20px;
@@ -263,12 +261,6 @@ a
 	box-shadow: 14px 0 14px 14px rgba(0,0,0,.2);
 	text-align: left;
 }
-.gustosize_display-none{
-	display: none;
-}
-.cheifsize_display-none{
-	display: none;
-}
 .gustosize__stok{
 	margin-top: 50px;
 	font-size: 25px;
@@ -317,7 +309,6 @@ a
 .delivery__city h2 {
 	top: 50%
 }
-
 .delivery__city span{
 	color: #000;
 }
@@ -517,169 +508,6 @@ max-height: 250px;
 	margin-top: 25px;
 }
 .complectations__button-item{
-	align-items: center;
-	background: #fff;
-	border: none;
-	box-shadow: 0 4px 15px rgba(0,0,0,.2);
-	cursor: pointer;
-	display: flex;
-	font-size: 14px;
-	height: 50px;
-	justify-content: center;
-	outline: 0;
-	padding: 0 10px;
-	text-align: center;
-	transition: .3s all;
-	width: 170px;
-}
-.complectations__button-item-active{
-	background-color: #54ed39;
-	color: #fff;
-}
-/* .offer
-{
-	padding: 70px 0 100px 0;
-	position: relative;
-}
-.offer .container
-{
-	display: flex;
-	justify-content: space-between;
-}
-.offer .bgc_y
-{
-	background: rgba(243,255,222,.45);
-	height: 780px;
-	position: absolute;
-	top: 50px;
-	width: 1109px;
-	z-index: -1;
-}
-.offer__text
-{
-	width: 580px;
-}
-.offer__descr
-{
-	font-size: 18px;
-	font-weight: 300;
-	line-height: 24px;
-	margin-top: 30px;
-}
-.offer__action
-{
-	align-items: center;
-	display: flex;
-	justify-content: flex-end;
-}
-.offer__advantages
-{
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
-.complectations h2{
-	text-align: center;
-}
-.complectations__button{
-	display: flex;
-	justify-content: space-evenly;
-	margin-top: 25px;
-}
-.offer__slider
-{
-	align-items: flex-end;
-	display: flex;
-	flex-direction: column;
-	margin-top: 50px;
-	width: 650px;
-}
-.offer__slider-counter
-{
-	align-items: center;
-	color: rgba(0,0,0,.5);
-	display: flex;
-	font-size: 24px;
-	width: 180px;
-}
-.offer__slider-wrapper
-{
-	box-shadow: 0 4px 30px rgba(0,0,0,.25);
-	margin-top: 15px;
-	width: 100%;
-}
-.offer__slider-prev
-{
-	cursor: pointer;
-	margin-right: 10px;
-}
-.offer__slider-next
-{
-	cursor: pointer;
-	margin-left: 10px;
-}
-.offer__slider #current
-{
-	color: #000;
-	font-size: 48px;
-	font-weight: 700;
-}
-.offer__slide
-{
-	height: 390px;
-	width: 100%;
-}
-.offer__slide img
-{
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
-} */
-.calculating
-{
-	padding: 50px 0;
-}
-.calculating .title
-{
-	text-align: center;
-}
-.calculating__field
-{
-	background: rgba(146,242,255,.15);
-	margin-top: 50px;
-	padding: 30px 0 40px 0;
-	width: 100%;
-}
-.calculating__subtitle
-{
-	font-size: 18px;
-	font-weight: 300;
-	margin-top: 30px;
-	text-align: center;
-}
-.calculating__subtitle:first-child
-{
-	margin-top: 0;
-}
-.calculating #gender:after
-{
-	background: url(../icons/switch.svg) center center/cover no-repeat;
-	content: '';
-	display: block;
-	height: 16px;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 16px;
-}
-.calculating__choose
-{
-	display: flex;
-	justify-content: center;
-	margin-top: 30px;
-	position: relative;
-}
-.calculating__choose-item
-{
 	align-items: center;
 	background: #fff;
 	border: none;
@@ -981,6 +809,8 @@ max-height: 250px;
 		}
 
 	}
+
+
 		@media (max-width:1366px){
 		
 		}
@@ -1008,80 +838,3 @@ max-height: 250px;
 		/* @media (max-width:320px){
 
 		} */
-	.gablok_sedakoda{
-	width: 100%;
-	margin: 0 auto;
-	overflow: hidden;
-	}
-	
-	.slayder_karusel{
-	position: relative;
-	width: 500%;
-	font-size: 0;
-	animation: 8s gablok_sedakoda-ani infinite;
-	}
-	
-	.slayder_karusel figure{
-	width: 20%;
-	height: auto;
-	display: inline-block;
-	position: inherit;
-	}
-	
-	.slayder_karusel img{
-	max-width: 100%;
-	vertical-align: bottom;
-	}
-	
-/* 	
-	.slayder_karusel figure figcaption{
-	position: absolute;
-	font-family: 'Roboto';
-	font-size: 1.4rem;
-	font-weight: 100;
-	text-transform: uppercase;
-	bottom: 0;
-	background: rgba(0,0,0,0.6);
-	color: #fff;
-	width: 100%;
-	padding: .5em;
-	} */
-	
-	@keyframes gablok_sedakoda-ani{
-	0%{
-	left: 0%;
-	}
-	
-	20%{
-	left: 0%;
-	}
-	
-	25%{
-	left: -100%;
-	}
-	
-	45%{
-	left: -100%;
-	}
-	
-	50%{
-	left: -200%;
-	}
-	
-	70%{
-	left: -200%;
-	}
-	
-	75%{
-	left: -300%;
-	}
-	
-	95%{
-	left: -300%;
-	}
-	
-	100%{
-	left: -400%;
-	}
-	
-	}

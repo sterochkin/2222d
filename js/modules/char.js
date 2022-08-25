@@ -222,7 +222,12 @@ preview.forEach(border => {
 });
 })
 
-
 }
+ let openh = document.querySelector('.bot-send-mail');
+ const closeh = document.querySelector('.call')
+ openh.addEventListener('click', () => {
+   closeh.style.display == 'none';
+ })
+
 
 export default char;

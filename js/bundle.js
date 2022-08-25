@@ -1,103 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./js/modules/calc.js":
-/*!****************************!*\
-  !*** ./js/modules/calc.js ***!
-  \****************************/
-/***/ (() => {
-
-// function calc(){
-// const buttons = document.querySelectorAll('.calculating__choose-item'),
-//       city_container = document.querySelector('.city_container'),
-//       price_out = document.querySelector('.price_out'),
-//       shipping_cost_out = document.querySelector('.shipping-cost_out'),
-//       price_out_all = document.querySelector('.price_out_all');
-
-// const prices = [
-// 20, 30, 25, 90, 55
-// ];
-
-//  const city_list = 
-//  [
-//    {name: "Не выбрано", shipping_cost: 0},
-//    {name: "Витебск", shipping_cost: 100},
-//    {name: "Минск", shipping_cost: 200},
-//    {name: "Гродно", shipping_cost: 300}
-//  ];
-
-// let current_price = 0;
-// let shipping_cost = 0;
-
-
-// function CreateDeliveryCities() {
-
-// const fragment = document.createDocumentFragment();
-
-// city_list.map((elem) => {
-// const option_node = document.createElement('option');
-
-// option_node.className = 'city_container';
-// option_node.textContent = `${elem.name}`;
-
-// fragment.append(option_node);
-// })
-
-// city_container.append(fragment);
-
-// city_container.addEventListener('change', function() {
-
-// shipping_cost = city_list[city_container.selectedIndex].shipping_cost;
-// ShowPrices();
-// })
-
-// shipping_cost = prices[0].shipping_cost;
-// ShowPrices();
-// }
-
-// function CreateButtonsHandler() {
-
-// for (let i = 0; i < buttons.length; i++) {
-
-// buttons[i].addEventListener('click', function() {
-
-// if (this.classList.contains('calculating__choose-item_active')) {
-
-//   this.classList.remove('calculating__choose-item_active');
-//   current_price -= prices[i];
-// }
-// else {
-
-//   this.classList.add('calculating__choose-item_active');
-//   current_price += prices[i];
-// }
-
-// ShowPrices();
-// });
-// }
-// }
-
-// function ShowPrices()
-// {
-// if(shipping_cost >= 0) {
-// price_out.textContent = `${current_price}`;
-// shipping_cost_out.textContent = `${shipping_cost}`;
-// price_out_all.textContent = `${current_price + shipping_cost}`;
-// } 
-// else {
-// price_out.textContent = `${current_price}`;
-// shipping_cost_out.textContent = '0';
-// price_out_all.textContent = `${current_price}`;
-// }
-// }
-
-// CreateButtonsHandler();
-// CreateDeliveryCities();
-// }
-// export default calc;
-
-/***/ }),
-
 /***/ "./js/modules/char.js":
 /*!****************************!*\
   !*** ./js/modules/char.js ***!
@@ -332,9 +235,46 @@ preview.forEach(border => {
 }
 });
 })
+
 }
+ let openh = document.querySelector('.bot-send-mail');
+ const closeh = document.querySelector('.call')
+ openh.addEventListener('click', () => {
+   closeh.style.display == 'none';
+ })
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (char);
+
+/***/ }),
+
+/***/ "./js/modules/reboot.js":
+/*!******************************!*\
+  !*** ./js/modules/reboot.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function reboot(){
+    $(function() {
+        $('form').submit(function() {
+            var formData = new FormData($(this)[0]);
+            $.ajax({
+                type: 'POST',
+                url: 'telegram.php',
+                data: formData,
+                processData: false,
+                contentType: false,
+            });
+            return false;
+        }); 
+    })
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reboot);
 
 /***/ }),
 
@@ -1629,20 +1569,18 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nodelist-foreach-polyfill */ "./node_modules/nodelist-foreach-polyfill/index.js");
 /* harmony import */ var nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nodelist_foreach_polyfill__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/calc */ "./js/modules/calc.js");
-/* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_calc__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
+/* harmony import */ var _modules_char__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/char */ "./js/modules/char.js");
+/* harmony import */ var _modules_reboot__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/reboot */ "./js/modules/reboot.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
-
-
 
 
 
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    // calc()
-    (0,_modules_char__WEBPACK_IMPORTED_MODULE_2__["default"])()
+    (0,_modules_char__WEBPACK_IMPORTED_MODULE_1__["default"])()
+    ;(0,_modules_reboot__WEBPACK_IMPORTED_MODULE_2__["default"])()
+    
 
 })  
 

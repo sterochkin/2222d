@@ -13,8 +13,8 @@ const circle = document.querySelectorAll(".preview__color-border")
 let buttons = document.querySelectorAll(".tabheader_char-item")
 const buttoncheif = document.querySelectorAll(".cheifsize__button-style")
 const buttongusto = document.querySelectorAll(".gustosize__button-style")
-const cheif = ['11кг','111x111(мм)', '111x111(мм)', '20 мин', '2 кг/ч']
-const gusto = ["64кг", "600x400(мм)", "185x470(мм)", "20 мин", "2 кг/ч"]
+const cheif = ['68кг','600x400(мм)', '150x415(мм)', '20 мин', '2 кг/ч']
+const gusto = ["92кг", "700x500(мм)", "180x480(мм)", "20 мин", "2,5 кг/ч"]
 
 buttoncheif.forEach(cheif => {
   cheif.addEventListener('click', () => {
@@ -159,7 +159,8 @@ circle.forEach(color => {
   else {
     (document.querySelector(".preview_small-img-active").classList.contains('foto3'))
     if(color.classList.contains('red')){
-        document.querySelector(".preview_img").src = '/img/gusto/gustored3.png'
+        document.querySelector(".preview_img").src = '/img/cheif/gustored3.png'
+
       } else if(color.classList.contains('green')){
         document.querySelector(".preview_img").src = '/img/gusto/gustogreen3.png'
       } else{
@@ -222,12 +223,24 @@ preview.forEach(border => {
 });
 })
 
-}
- let openh = document.querySelector('.bot-send-mail');
- const closeh = document.querySelector('.call')
- openh.addEventListener('click', () => {
-   closeh.style.display == 'none';
- })
+let openh = document.querySelector('.bot-send-mail');
+const closeh = document.querySelector('.message_sec')
+let form = document.forms.zvonok; // <form name="my"> element
+let elem = form.elements.user_name; // <input name="one"> element
 
+openh.addEventListener('click', () => { 
+  if(document.getElementById("user_name").value === '') {
+  }else{
+    openh.addEventListener('click', () => { 
+      closeh.classList.add("message_sec-active")
+      setTimeout(function(){
+        location.reload();
+      }, 2000);
+     })
+  }
+})
+
+
+}
 
 export default char;
